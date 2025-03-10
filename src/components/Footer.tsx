@@ -1,18 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Footer() {
     return (
         <footer className="py-6 mt-12 text-center text-gray-600 bg-gray-100 flex-none">
             <div className="container px-4 mx-auto">
                 <p>Sponsored by: the Carstairs &amp; District Agricultural Society</p>
-                <Image
-                    src="/CDAS_logo_FINAL_web.png"
-                    alt="Carstairs Ag Society Logo"
-                    width={100}
-                    height={100}
-                    className="mx-auto mt-4"
-                />
+                <Link href="https://CarstairsAgSociety.ca">
+                    <Image
+                        src="/CDAS_logo_FINAL_web.png"
+                        alt="Carstairs Ag Society Logo"
+                        width={100}
+                        height={100}
+                        className="mx-auto mt-4"
+                    />
+                </Link>
+
                 <p className="mt-2">
                     <a href="https://CarstairsAgSociety.ca" className="text-blue-500 hover:underline">
                         CarstairsAgSociety.ca
