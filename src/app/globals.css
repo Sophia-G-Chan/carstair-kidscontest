@@ -22,3 +22,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.green-filter {
+  filter: brightness(0) saturate(100%) invert(77%) sepia(24%) saturate(833%) hue-rotate(78deg) brightness(93%) contrast(96%);
+}
+
+.blue-filter{
+  filter: brightness(0) saturate(100%) invert(22%) sepia(61%) saturate(4356%) hue-rotate(215deg) brightness(99%) contrast(94%);
+}
