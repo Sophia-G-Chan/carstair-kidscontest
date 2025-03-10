@@ -7,7 +7,7 @@ function Header() {
         <header className="sticky top-0 z-10 bg-white border-b shadow-sm flex-none">
             <div className="container flex items-center justify-between h-16 px-4 mx-auto">
                 <Link href="/" className="flex items-center space-x-2">
-                    <span className="text-xl font-bold text-blue-500">Carstairs Kids' Contest</span>
+                    <span className="text-xl font-bold text-blue-500">Carstairs Kids&apos; Contest</span>
                 </Link>
                 <nav className="flex items-center space-x-4">
                     <Link href="/rules">

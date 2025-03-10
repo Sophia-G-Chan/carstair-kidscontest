@@ -1,7 +1,7 @@
 import React from 'react'
 import { ArrowLeft, MapPin, Clock, Calendar, Info } from "lucide-react"
 import Link from 'next/link'
-import Image from 'next/image'
+
 
 function VenuePage() {
     return (
