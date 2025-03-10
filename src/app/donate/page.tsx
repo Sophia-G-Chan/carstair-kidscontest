@@ -19,7 +19,7 @@ export default function DonatePage() {
                         Your generosity powers our mission to create engaging experiences for the young minds of Carstairs! Every donation helps us organize exciting contests, educational activities, and community events that bring our children together.
                         </p>
 
-                        <p>Our events inspire creativity, build confidence, and foster lasting friendships within our wonderful community. Whether it's craft supplies, event spaces, or learning materials - your contribution makes these moments possible.</p>
+                        <p>Our events inspire creativity, build confidence, and foster lasting friendships within our wonderful community. Whether it&apos;s craft supplies, event paces, or learning materials - your contribution makes these moments possible.</p>
 
                         <p>
                         Want to donate prizes? We welcome new items that spark joy and creativity in our young participants! From art supplies to educational games, your prize donations help make our events extra special.
