@@ -14,7 +14,7 @@ export default function Home() {
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute left-0 top-15 transform rotate-12 md:left-14"
+				className="absolute left-0 top-5 transform -rotate-12 md:left-14"
 				priority
 			/>
 
@@ -32,11 +32,6 @@ export default function Home() {
 						<Link href="/rules">
 							<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
 								See Contest Rules
-							</Button>
-						</Link>
-						<Link href="/register">
-							<Button className="px-6 py-6 text-lg font-bold text-white bg-green-500 hover:bg-green-600">
-								Register Now
 							</Button>
 						</Link>
 					</div>
