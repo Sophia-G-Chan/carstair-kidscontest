@@ -24,7 +24,7 @@ export default function Home() {
 						<span className=" text-blue-500">MAKE </span>
 						<span className=" text-red-500">BAKE</span>
 						<span className="block text-green-500">&amp; GROW</span>
-						Kids' Contest
+						Kids&apos; Contest
 					</h1>
 					<p className="mb-4 text-xl text-gray-700">PRESENTED BY THE CARSTAIRS HORTICULTURAL &amp; CRAFT SHOW</p>
 					<p className="mb-8 text-lg text-gray-600">CREATE TOGETHER &amp; ENTER FOR A FAMILY FUN TIME!</p>

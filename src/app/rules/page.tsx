@@ -73,7 +73,7 @@ export default function RulePage() {
                                 <li>Artwork can be in any medium</li>
                                 <li>Photography must be taken by the participant</li>
                                 <li>All entries should be mounted or framed for display</li>
-                                <li>Maximum size: 16" x 20"</li>
+                                <li>Maximum size: 16&quot; x 20&quot;`</li>
                             </ul>
                         </div>
 
