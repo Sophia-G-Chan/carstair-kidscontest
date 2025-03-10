@@ -21,8 +21,8 @@ function VenuePage() {
                             <div>
                                 <h2 className="mb-2 text-xl font-bold text-green-800">Location</h2>
                                 <p className="text-lg font-medium">Carstairs Curling Rink</p>
-                                <p>123 Main Street</p>
-                                <p>Carstairs, Alberta</p>
+                                <p>350 11 Ave,</p>
+                                <p>Carstairs, Alberta T0M 0N0</p>
                                 <p className="mt-2">
                                     <a
                                         href="https://maps.google.com/?q=Carstairs+Curling+Rink"
@@ -57,18 +57,6 @@ function VenuePage() {
                                     <p>11:00 AM - 4:00 PM</p>
                                     <p className="mt-2 text-sm text-red-700">Awards ceremony will be held at 3:00 PM</p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-md">
-                            {/* <Image
-                                src="/placeholder.svg?height=400&width=800"
-                                alt="Carstairs Curling Rink"
-                                fill
-                                className="object-cover"
-                            /> */}
-                            <div className="absolute bottom-0 w-full p-3 text-center text-white bg-black bg-opacity-50">
-                                Carstairs Curling Rink
                             </div>
                         </div>
 
