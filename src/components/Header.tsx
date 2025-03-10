@@ -29,16 +29,24 @@ function Header() {
                     <Link href="/venue">
                         <Button
                             variant="outline"
-                            className="font-medium border-2 border-green-400 text-green-600 hover:bg-green-100"
+                            className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100"
                         >
                             <Image
                                 src="/maps-and-flags.png"
                                 alt="Checklist Icon"
                                 width={24}
                                 height={24}
-                                className="inline-block pr-1 green-filter"
+                                className="inline-block pr-1 blue-filter"
                             />
                             Venue Info
+                        </Button>
+                    </Link>
+                    <Link href="/donate" >
+                        <Button
+                            variant="outline"
+                            className="border-2 bg-green-500 text-white font-bold hover:bg-green-800"
+                        >
+                            Donate
                         </Button>
                     </Link>
                 </nav>
