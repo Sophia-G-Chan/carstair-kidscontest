@@ -78,12 +78,6 @@ function VenuePage() {
                             <h2 className="mb-2 text-xl font-bold text-purple-800">Questions?</h2>
                             <p className="text-purple-700">For more information about the venue or event, please contact:</p>
                             <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose</a>
-                            <p className="mt-1 text-sm text-purple-700">or visit our website</p>
-                            <p className="font-medium text-purple-800">
-                                <a href="https://CarstairsAgSociety.ca" className="hover:underline">
-                                    CarstairsAgSociety.ca
-                                </a>
-                            </p>
                         </div>
                     </div>
                 </div>
