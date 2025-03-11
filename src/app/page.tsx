@@ -5,14 +5,14 @@ import { Flower, Palette, Cake, Award, ChefHat, Sparkles } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main className="container px-4 py-8 mx-auto relative flex-1">
+		<main className="container px-4 py-8 mx-auto relative flex-1 overflow-hidden">
 
 			<Image
 				src="/cupcake.png"
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute left-0 top-5 transform -rotate-12 md:left-14"
+				className="absolute left-0 top-5 transform -rotate-12 md:left-24"
 				priority
 			/>
 			<div className="absolute top-40 left-60 animate-bounce-slow hidden md:block">
@@ -27,7 +27,7 @@ export default function Home() {
 			<div className="absolute bottom-60 right-0 animate-bounce-slow hidden md:block">
 				<Palette size={40} className="text-blue-500" />
 			</div>
-			<div className="absolute -bottom-5 right-40 animate-bounce-slow hidden md:block">
+			<div className="absolute bottom-5 right-40 animate-bounce-slow hidden md:block">
 				<ChefHat size={40} className="text-grey-400" />
 			</div>
 			<Image
@@ -35,7 +35,7 @@ export default function Home() {
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute -right-0 top-55 transform rotate-12 md:-right-10"
+				className="absolute -right-0 top-42 transform rotate-12"
 				priority
 			/>
 			<Image
@@ -43,16 +43,16 @@ export default function Home() {
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute -left-5 -bottom-12 transform rotate-12 md:-left-20"
+				className="absolute left-1 -bottom-0 transform rotate-12"
 				priority
 			/>
 
 			<section className="flex flex-col items-center justify-center text-center">
 				<div className="max-w-4xl mb-8 relative">
 					<h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-6xl">
-						<span className="block text-blue-500 drop-shadow-md animate-float outlined-text">MAKE</span>
-						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300 outlined-text">BAKE</span>
-						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 outlined-text">&amp; GROW</span>
+						<span className="block text-blue-500 drop-shadow-md animate-float ">MAKE</span>
+						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300">BAKE</span>
+						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 ">&amp; GROW</span>
 					</h1>
 					<div className="absolute top-0 right-0 transform translate-x-full -translate-y-1/4 animate-spin-slow">
 						<Sparkles className="text-yellow-400 w-8 h-8" />
