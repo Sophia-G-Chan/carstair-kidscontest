@@ -1,11 +1,20 @@
 import React from 'react'
-import { ArrowLeft, MapPin, Clock, Calendar, Info } from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Calendar, Info, Star, Heart, Sparkles } from "lucide-react"
 import Link from 'next/link'
 
 
 function VenuePage() {
     return (
         <main className="container px-4 py-8 mx-auto">
+            <div className="absolute top-40 right-10 animate-float hidden md:block">
+                <Star size={30} className="text-yellow-400" />
+            </div>
+            <div className="absolute top-60 left-20 animate-bounce-slow hidden md:block">
+                <Heart size={30} className="text-pink-400" />
+            </div>
+            <div className="absolute bottom-40 right-20 animate-spin-slow hidden md:block">
+                <Sparkles size={30} className="text-purple-400" />
+            </div>
             <div className="max-w-3xl mx-auto">
                 <Link href="/" className="inline-flex items-center mb-6 text-blue-500 hover:text-blue-700">
                     <ArrowLeft className="w-4 h-4 mr-2" />
