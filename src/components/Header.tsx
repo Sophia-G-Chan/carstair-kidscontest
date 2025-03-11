@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from '../components/ui/button'
 import Image from 'next/image'
-import { Heart } from "lucide-react"
+import { Heart, MapPin} from "lucide-react"
 
 function Header() {
     return (
@@ -33,13 +33,14 @@ function Header() {
                             variant="outline"
                             className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100"
                         >
-                            <Image
+                            <MapPin className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-blue-600" />
+                            {/* <Image
                                 src="/maps-and-flags.png"
                                 alt="Checklist Icon"
                                 width={24}
                                 height={24}
                                 className="inline-block pr-1 blue-filter"
-                            />
+                            /> */}
                             Venue Info
                         </Button>
                     </Link>

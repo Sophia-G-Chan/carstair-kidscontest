@@ -104,8 +104,10 @@ export default function Home() {
 						<div className="flex flex-wrap justify-end gap-4 mt-3">
 							<Link href="/rules">
 								<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
+
 									See Contest Rules
 								</Button>
+
 							</Link>
 						</div>
 					</div>
