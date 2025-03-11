@@ -50,9 +50,9 @@ export default function Home() {
 			<section className="flex flex-col items-center justify-center text-center">
 				<div className="max-w-4xl mb-8 relative">
 					<h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-6xl">
-						<span className="block text-blue-500 drop-shadow-md animate-float">MAKE</span>
-						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300">BAKE</span>
-						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600">&amp; GROW</span>
+						<span className="block text-blue-500 drop-shadow-md animate-float outlined-text">MAKE</span>
+						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300 outlined-text">BAKE</span>
+						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 outlined-text">&amp; GROW</span>
 					</h1>
 					<div className="absolute top-0 right-0 transform translate-x-full -translate-y-1/4 animate-spin-slow">
 						<Sparkles className="text-yellow-400 w-8 h-8" />
