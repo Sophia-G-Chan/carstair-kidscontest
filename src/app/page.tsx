@@ -30,6 +30,22 @@ export default function Home() {
 			<div className="absolute -bottom-5 right-40 animate-bounce-slow hidden md:block">
 				<ChefHat size={40} className="text-grey-400" />
 			</div>
+			<Image
+				src="/rainbow.png"
+				alt="Kids Contest Poster"
+				width={100}
+				height={100}
+				className="absolute -right-0 top-55 transform rotate-12 md:-right-10"
+				priority
+			/>
+			<Image
+				src="/square.png"
+				alt="Kids Contest Poster"
+				width={100}
+				height={100}
+				className="absolute -left-5 -bottom-12 transform rotate-12 md:-left-20"
+				priority
+			/>
 
 			<section className="flex flex-col items-center justify-center text-center">
 				<div className="max-w-4xl mb-8 relative">
@@ -57,13 +73,7 @@ export default function Home() {
 				<article>
 					<p className="mb-4 text-xl text-gray-700">Presented by the Carstairs Horticultural &amp; Craft Show</p>
 					<p className="mb-8 text-lg text-gray-600">Create Together &amp; Enter for a Family Fun Time!</p>
-					<div className="flex flex-wrap justify-center gap-4 mb-8">
-						<Link href="/rules">
-							<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
-								See Contest Rules
-							</Button>
-						</Link>
-					</div>
+
 				</article>
 
 
@@ -91,25 +101,35 @@ export default function Home() {
 								<span>Artwork &amp; photography</span>
 							</li>
 						</ul>
-					</div>
-					<div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-red-200 transform hover:scale-105 transition-transform text-left">
-						<h3 className="text-2xl font-bold text-red-600 mb-2">Important Dates</h3>
-						<p className="text-lg mb-1">
-							<strong>Drop Off:</strong> Friday, Aug 15, 2025 8am - 11am
-						</p>
-						<p className="text-lg">
-							<strong>Viewing Day:</strong> Saturday, Aug 16, 2025 11am - 4pm
-						</p>
-						<p className="text-lg flex">
-						<Award className="w-6 h-6 text-yellow-700" />
-							<strong>Awards:</strong> Saturday, Aug 16, 2025 3pm
-						</p>
-						<div className="absolute -top-4 -right-4 z-20 animate-bounce-slow">
-							<div className="bg-yellow-300 rounded-full p-3 shadow-md">
-								<Award className="w-6 h-6 text-yellow-700" />
-							</div>
+						<div className="flex flex-wrap justify-end gap-4 mt-3">
+							<Link href="/rules">
+								<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
+									See Contest Rules
+								</Button>
+							</Link>
 						</div>
 					</div>
+					<Link href="/venue">
+
+						<div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-red-200 transform hover:scale-105 transition-transform text-left flex flex-col ">
+							<h3 className="text-2xl font-bold text-red-600 mb-2">Important Dates</h3>
+							<p className="text-lg mb-1">
+								<strong>Drop Off:</strong> Friday, Aug 15, 2025 8am - 11am
+							</p>
+							<p className="text-lg">
+								<strong>Viewing Day:</strong> Saturday, Aug 16, 2025 11am - 4pm
+							</p>
+							<p className="text-lg flex">
+								<Award className="w-6 h-6 text-yellow-700" />
+								<strong>Awards:</strong> Saturday, Aug 16, 2025 3pm
+							</p>
+							<div className="absolute -top-4 -right-4 z-20 animate-bounce-slow">
+								<div className="bg-yellow-300 rounded-full p-3 shadow-md">
+									<Award className="w-6 h-6 text-yellow-700" />
+								</div>
+							</div>
+						</div>
+					</Link>
 				</section>
 			</section>
 		</main>

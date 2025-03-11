@@ -5,6 +5,15 @@ import { Flower, Palette, Cake, Award, Star, Sparkles } from "lucide-react";
 export default function RulePage() {
     return (
         <main className="container px-4 py-8 mx-auto">
+            <div className="absolute top-120 left-20 animate-spin-slow hidden md:block">
+                <Sparkles size={30} className="text-purple-400" />
+            </div>
+            <div className="absolute top-40 right-20 animate-spin-slow hidden md:block">
+                <Sparkles size={30} className="text-purple-400" />
+            </div>
+            <div className="absolute bottom-40 right-20 animate-spin-slow hidden md:block">
+                <Sparkles size={30} className="text-purple-400" />
+            </div>
             <div className="max-w-3xl mx-auto">
                 <Link href="/" className="inline-flex items-center mb-6 text-blue-500 hover:text-blue-700">
                     <ArrowLeft className="w-4 h-4 mr-2" />
@@ -145,7 +154,7 @@ export default function RulePage() {
 
                         <div className="p-4 text-center bg-purple-100 rounded-xl border-2 border-purple-200">
                             <p className="text-purple-800">For more information or questions, please email:</p>
-                            <p className="font-bold text-purple-800">rose.warden@hotmail.com</p>
+                            <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose</a>
                         </div>
                     </div>
                 </div>
