@@ -18,26 +18,28 @@ export default function DonatePage() {
                     Back to Home
                 </Link>
 
-                <div className="p-8 bg-white rounded-lg shadow-lg">
+                <div className="p-8 bg-white rounded-lg shadow-lg flex flex-col gap-3">
                     <h1 className="mb-6 text-3xl font-bold text-center text-blue-600">Support Carstairs Kids Connect</h1>
 
                     <div className="space-y-6">
 
                         <p>
-                        Your generosity powers our mission to create engaging experiences for the young minds of Carstairs! Every donation helps us organize exciting contests, educational activities, and community events that bring our children together.
+                            Your generosity powers our mission to create engaging experiences for the young minds of Carstairs! Every donation helps us organize exciting contests, educational activities, and community events that bring our children together.
                         </p>
 
                         <p>Our events inspire creativity, build confidence, and foster lasting friendships within our wonderful community. Whether it&apos;s craft supplies, event paces, or learning materials - your contribution makes these moments possible.</p>
 
                         <p>
-                        Want to donate prizes? We welcome new items that spark joy and creativity in our young participants! From art supplies to educational games, your prize donations help make our events extra special.
+                            Want to donate prizes? We welcome new items that spark joy and creativity in our young participants! From art supplies to educational games, your prize donations help make our events extra special.
                         </p>
+
+                    </div>
+                    <div className="flex items-start p-4 bg-yellow-100 rounded-lg mt-6">
                         <p>
-                        Ready to make a difference? Contact  <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose </a>
-                        to start your donation today! Every dollar helps create more magical moments for Carstairs kids!
+                            Ready to make a difference? Contact  <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose </a>
+                            to start your donation today! Every dollar helps create more magical moments for Carstairs kids!
                         </p>
                     </div>
-
                 </div>
             </div>
         </main>
