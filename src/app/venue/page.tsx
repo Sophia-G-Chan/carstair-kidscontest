@@ -86,7 +86,7 @@ function VenuePage() {
                         <div className="p-4 text-center bg-purple-100 rounded-lg">
                             <h2 className="mb-2 text-xl font-bold text-purple-800">Questions?</h2>
                             <p className="text-purple-700">For more information about the venue or event, please contact:</p>
-                            <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose</a>
+                            <a className="mt-2 font-bold text-purple-800" href="mailto:carstairskidscontest@gmail.com">Rose Warden</a>
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,27 @@ import { ArrowLeft } from "lucide-react"
 import { Flower, Palette, Cake, Award, Star, Sparkles } from "lucide-react";
 
 export default function RulePage() {
+    const categories = [
+        'High Points in Show',
+        'High Points Flowers',
+        'High Points Vegetables',
+        'High Points Handicrafts',
+        'High Points Hobby Crafts and Artwork',
+        'High Points Baking',
+        'High Points Photography',
+        'Best in Show Sunflower',
+        'Best in Show Fairy Garden',
+        'Best in Show Vegetables',
+        'Best in Show Baking',
+        'Best in Show Handicrafts',
+        'Best in Show Hobby Crafts and Artwork',
+        'Best in Show Photography',
+    ];
+    const u5Categories = [
+        'Best in Show – Best entry from U1 – U9',
+        'Best in Show Colouring Page'
+    ];
+
     return (
         <main className="container px-4 py-8 mx-auto">
             <div className="absolute top-120 left-20 animate-spin-slow hidden md:block">
@@ -31,7 +52,14 @@ export default function RulePage() {
                     <h1 className="mb-6 text-3xl font-bold text-center text-blue-600">Contest Rules</h1>
 
                     <div className="space-y-6">
+
+                        <a
+                            href='https://drive.google.com/file/d/1AgcGxoGUfrFwcJB24ZPG5t95odfToQIy/view'
+                            className="block p-4 text-center text-blue-600 bg-blue-100 rounded-xl border-2 border-blue-200 hover:bg-blue-200"
+                        >Detailed PDF Rules Click Here</a>
+
                         <div className="p-4 bg-yellow-100 rounded-xl border-2 border-yellow-200">
+
                             <h2 className="mb-2 text-xl font-bold text-yellow-800 flex items-center">
                                 <Star className="w-5 h-5 mr-2 text-yellow-600" />
                                 Important Dates
@@ -52,19 +80,40 @@ export default function RulePage() {
                                 <Award className="w-5 h-5 mr-2 text-blue-600" />
                                 General Rules
                             </h2>
-                            <ul className="pl-5 space-y-2 list-disc">
-                                <li>Open to all children ages 17 and under</li>
-                                <li>All entries must be the work of the child entering the contest</li>
-                                <li>
-                                    Parents/guardians may assist younger children, but the work should be primarily done by the child
+                            <ol className="pl-5 space-y-2 list-decimal ">
+                                <li>Entries are judged under four main categories of participants:
+                                    <ul className="px-4 list-disc">
+                                        <li>Individual: 5 years and under</li>
+                                        <li>Individual: 6-10 years</li>
+                                        <li>Individual: 11-17 years</li>
+                                        <li>Group: Family or Team</li>
+                                    </ul>
+
                                 </li>
-                                <li>Each participant may enter multiple categories</li>
-                                <li>All entries must be submitted during the drop-off time</li>
+                                <li>For “Group” entries, at least 50% of the group members must be aged 17 and under.</li>
+                                <li>Entries must be made, grown or produced by the participant(s), and not previously entered at one of our past events.</li>
+                                <li>All vegetable and flower entries must be grown within Mountain View County. Please no restricted or noxious weeds.</li>
+                                <li>Each individual participant, or member within a group, may have no more than one entry per category (e.g. one entry in VF1 cabbage). There is no limit to the number of categories participants can enter.</li>
+                                <li>
+                                    Judging will follow the “Fair System” (for more info check out the&nbsp;
+                                    <a
+                                        href='https://open.alberta.ca/publications/judging-and-exhibiting-standards-for-horticultural-shows'
+                                        className="text-blue-600 underline">
+                                        Alberta Government site
+                                    </a>)
+                                </li>
+                                <li>Ribbons are awarded at the discretion of the judges. Each category may not have 1st, 2nd and 3rd place winners. Ribbons are awarded as follows:
+                                    <ul className="px-4 list-disc">
+                                        <li>1st place – Red Ribbon</li>
+                                        <li>2nd place – Blue Ribbon</li>
+                                        <li>3rd place – White Ribbon</li>
+                                    </ul>
+                                </li>
                                 <li>
                                     Entries must include a completed entry form (available at the venue or downloadable from our
                                     website)
                                 </li>
-                            </ul>
+                            </ol>
                         </div>
 
                         <div>
@@ -139,22 +188,71 @@ export default function RulePage() {
                         </div>
 
                         <div>
+
                             <h2 className="mb-3 text-xl font-bold text-red-700 flex items-center">
                                 <Award className="w-5 h-5 mr-2 text-red-600" />
-                                Judging & Prizes
+                                Prizes
                             </h2>
-                            <ul className="pl-5 space-y-2 list-disc">
-                                <li>Entries will be judged on creativity, skill, presentation, and adherence to theme</li>
-                                <li>Age-appropriate judging will be applied (entries will be grouped by age ranges)</li>
-                                <li>Ribbons will be awarded for 1st, 2nd, and 3rd place in each category and age group</li>
-                                <li>Special prizes will be awarded for Best in Show</li>
-                                <li>All participants will receive a certificate of participation</li>
-                            </ul>
+                            <p className="mb-6">Cash awards are available for the following:</p>
+                            <h3 className="font-bold">Ages 5 &amp; Under</h3>
+                            <div className="overflow-x-auto rounded-t-xl mb-6 ">
+                                <table className="min-w-full bg-white border border-gray-300 rounded-xl">
+                                    <thead>
+                                        <tr className="bg-blue-200">
+                                            <th className="px-6 py-3 border-b text-left">Category</th>
+                                            <th className="px-6 py-3 border-b text-center">Individual</th>
+                                            <th className="px-6 py-3 border-b text-center">Group</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {u5Categories.map((category, index) => (
+                                            <tr key={index} className="hover:bg-blue-50">
+                                                <td className="px-6 py-2 border-b">{category}</td>
+                                                <td className="px-6 py-2 border-b text-center">
+                                                    $10
+                                                </td>
+                                                <td className="px-6 py-2 border-b text-center">
+                                                    $10
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3 className="font-bold">Ages 6 &amp; Up</h3>
+                            <div className="overflow-x-auto rounded-t-xl ">
+                                <table className="min-w-full bg-white border border-gray-300 rounded-xl">
+                                    <thead>
+                                        <tr className="bg-blue-200">
+                                            <th className="px-6 py-3 border-b text-left">Category</th>
+                                            <th className="px-6 py-3 border-b text-center">Ages 6-10 Individual</th>
+                                            <th className="px-6 py-3 border-b text-center">Ages 11-17 Individual</th>
+                                            <th className="px-6 py-3 border-b text-center">Group</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {categories.map((category, index) => (
+                                            <tr key={index} className="hover:bg-blue-50">
+                                                <td className="px-6 py-2 border-b">{category}</td>
+                                                <td className="px-6 py-2 border-b text-center">
+                                                    {index === 0 ? '$20' : '$10'}
+                                                </td>
+                                                <td className="px-6 py-2 border-b text-center">
+                                                    {index === 0 ? '$20' : '$10'}
+                                                </td>
+                                                <td className="px-6 py-2 border-b text-center">
+                                                    {index === 0 ? '$20' : '$10'}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <div className="p-4 text-center bg-purple-100 rounded-xl border-2 border-purple-200">
                             <p className="text-purple-800">For more information or questions, please email:</p>
-                            <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose</a>
+                            <a className="mt-2 font-bold text-purple-800" href="mailto:carstairskidscontest@gmail.com">Rose Warden</a>
                         </div>
                     </div>
                 </div>
