@@ -64,15 +64,23 @@ export default function Home() {
 
 				<h2 className="mb-6 text-4xl font-bold text-black drop-shadow-sm">Kids&apos; Contest</h2>
 
-				<div className="flex flex-col md:flex-row justify-center gap-4 mb-8">
+				<div className="flex flex-col  justify-center gap-4 mb-8">
 					<Link href="/join"
 						className=" rounded-full">
 						<Button className="px-2 py-2 bg-yellow-100 rounded-full border-2 border-yellow-300 text-lg font-bold text-yellow-800 shadow-lg transform transition-transform hover:scale-105 whitespace-nowrap"
 						size="default">
 							<ChefHat className="w-6 h-6 mr-2" />
-							Ages 17 &amp; under, join the Fun!
+							Ages 17 &amp; under, click here join the Fun!
 						</Button>
 					</Link>
+					<Link href="https://checkout.square.site/merchant/MLB8TY1QMQG6C/checkout/2CDTARWNLSSNSKDCUZF3SAFV?src=webqr" >
+                            <Button
+                                variant="outline"
+                                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-lg transform transition-transform hover:scale-105 text-white font-bold "
+                            >
+                                Donate
+                            </Button>
+                        </Link>
 				</div>
 
 				<article>

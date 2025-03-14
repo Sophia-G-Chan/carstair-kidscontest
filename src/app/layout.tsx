@@ -14,12 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-const delius = DynaPuff({
+const dynaPuff = DynaPuff({
   subsets: ["latin"],
-  weight: ["400"], // Delius only has one weight
-});
-
+  weight: ["400", "500", "600", "700"], // Available font weights
+})
 export const metadata: Metadata = {
   title: "Carstairs Kids' Make, Bake & Grow Contest",
   description: "Join the Carstairs Horticultural & Craft Show for an exciting family adventure! Get creative together as kids make, bake, and grow their way to fun. A fantastic community event where young talents shine through crafts, cooking, and gardening. Enter now for memorable family moments!",
@@ -35,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={delius.variable}>
+    <html lang="en" className={dynaPuff.className}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full min-h-screen flex flex-col  bg-gradient-to-b from-blue-50 to-purple-50 `}
       >
