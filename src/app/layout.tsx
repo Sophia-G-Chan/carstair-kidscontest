@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Chewy, DynaPuff } from "next/font/google";
+import { Geist, Geist_Mono, DynaPuff } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -14,11 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const chewyFont = Chewy({
-  variable: "--font-chewy", // Define a CSS variable for easy use
-  subsets: ["latin"], // Ensure Latin characters are included
-  weight: "400", // Chewy only has one weight (400)
-});
 
 const delius = DynaPuff({
   subsets: ["latin"],
@@ -40,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={chewyFont.variable}>
+    <html lang="en" className={delius.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full min-h-screen flex flex-col  bg-gradient-to-b from-blue-50 to-purple-50 `}
       >

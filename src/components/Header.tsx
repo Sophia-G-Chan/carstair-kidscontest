@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link'
 import { Button } from '../components/ui/button'
 import Image from 'next/image'
-import { Heart, MapPin, Menu, X } from "lucide-react"
+import { MapPin, Menu, X } from "lucide-react"
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
