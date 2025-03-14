@@ -64,6 +64,7 @@ function VenuePage() {
                                     <h2 className="mb-2 text-xl font-bold text-red-800">Viewing Day</h2>
                                     <p className="text-lg font-medium">Saturday, August 16, 2025</p>
                                     <p>11:00 AM - 4:00 PM</p>
+                                    <p className='my-2'>This is when family, friends and community gather to appreciate the talents and hard work of our participants!</p>
                                     <p className="mt-2 text-sm text-red-700">Awards ceremony will be held at 3:00 PM</p>
                                 </div>
                             </div>
