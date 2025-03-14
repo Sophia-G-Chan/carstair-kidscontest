@@ -1,8 +1,34 @@
 import React from "react";
-import { ContestSection } from "@/lib/constants";
+
+type MainAwards = {
+    [awardName: string]: {
+        "Ages 6-10 Individual": string | number;
+        "Ages 11-17 Individual": string | number;
+        Group: string | number;
+    };
+};
+
+type Age5AndUnderAwards = {
+    [awardName: string]: {
+        Individual: string | number;
+        Group: string | number;
+    };
+};
+
+type ContestSection = {
+    name: string;
+    categories: {
+        code: string;
+        description: string;
+    }[];
+};
 
 interface TableProps {
-    data: any;
+    data: {
+        mainAwards: MainAwards;
+        age5AndUnderAwards?: Age5AndUnderAwards;
+        contestSections?: ContestSection[];
+    };
     type: "categories" | "mainAwards" | "age5AndUnderAwards";
     sectionName?: string;
     className?: string;
@@ -20,7 +46,7 @@ const Table: React.FC<TableProps> = ({
     const getTableData = () => {
         if (type === "categories" && sectionName) {
             // Get categories for a specific section
-            const section = data.contestSections.find(
+            const section = data.contestSections?.find(
                 (s: ContestSection) => s.name === sectionName
             );
 
@@ -44,14 +70,13 @@ const Table: React.FC<TableProps> = ({
             };
         }
         else if (type === "age5AndUnderAwards") {
-            // Structure for 5 and under awards
             return {
                 columns: ["Award", "Individual", "Group"],
-                rows: Object.entries(data.age5AndUnderAwards).map(([award, values]) => [
+                rows: Object.entries(data.age5AndUnderAwards || {}).map(([award, values]) => [
                     award,
                     values["Individual"],
-                    values["Group"]
-                ])
+                    values["Group"],
+                ]),
             };
         }
 

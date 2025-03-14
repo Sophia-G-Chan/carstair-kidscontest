@@ -8,10 +8,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 body {
-
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -85,4 +82,8 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+.chewy-text {
+  font-family: "DynaPuff", cursive;
+  /* font-family: var(--font-chewy), sans-serif; */
 }

@@ -8,11 +8,11 @@ export default function Home() {
 		<main className="container px-4 py-8 mx-auto relative flex-1 overflow-hidden">
 
 			<Image
-				src="/cupcake.png"
+				src="/plant.png"
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute left-0 top-5 transform -rotate-12 md:left-24"
+				className="absolute -left-5 top-5 transform -rotate-12 md:left-24"
 				priority
 			/>
 			<div className="absolute top-40 left-60 animate-bounce-slow hidden md:block">
@@ -49,10 +49,10 @@ export default function Home() {
 
 			<section className="flex flex-col items-center justify-center text-center">
 				<div className="max-w-4xl mb-8 relative">
-					<h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-6xl">
-						<span className="block text-blue-500 drop-shadow-md animate-float ">MAKE</span>
-						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300">BAKE</span>
-						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 ">&amp; GROW</span>
+					<h1 className="mb-4 text-7xl font-extrabold tracking-tight md:text-10xl ">
+						<span className={`block text-blue-500 drop-shadow-lg animate-float chewy-text`}>Make</span>
+						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300 chewy-text">Bake</span>
+						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 chewy-text">&amp; Grow</span>
 					</h1>
 					<div className="absolute top-0 right-0 transform translate-x-full -translate-y-1/4 animate-spin-slow">
 						<Sparkles className="text-yellow-400 w-8 h-8" />

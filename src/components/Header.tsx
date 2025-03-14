@@ -18,7 +18,6 @@ function Header() {
             <div className="container flex items-center justify-between h-16 px-4 mx-auto">
                 <Link href="/" className="flex items-center space-x-2">
                     <span className="text-xl font-bold text-blue-500 whitespace-nowrap">Carstairs Kids&apos; Contest</span>
-                    <Heart className="text-pink-500 animate-pulse" />
                 </Link>
 
 
@@ -62,7 +61,16 @@ function Header() {
                                                 Venue Info
                                             </Button>
                                         </Link>
-                                        <Link href="/donate"  onClick={handleNav}>
+                                        <Link href="/get-involved"  onClick={handleNav}>
+                                            <Button
+                                                variant="default"
+                                                className="font-medium text-blue-600 hover:bg-blue-100"
+                                                size='lg'
+                                            >
+                                                Get Involved
+                                            </Button>
+                                        </Link>
+                                        <Link href="https://checkout.square.site/merchant/MLB8TY1QMQG6C/checkout/2CDTARWNLSSNSKDCUZF3SAFV?src=webqr"  onClick={handleNav}>
                                             <Button
                                                 variant="outline"
                                                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-lg transform transition-transform hover:scale-105 text-white font-bold "
@@ -71,17 +79,16 @@ function Header() {
                                                 Donate
                                             </Button>
                                         </Link>
-
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    <div className='hidden md:flex gap-2'>
+                    <div className='hidden md:flex gap-2 items-center'>
                         <Link href="/rules" >
                             <Button
                                 variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100"
+                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
                                 <Image
                                     src="/checklist.png"
@@ -93,16 +100,25 @@ function Header() {
                                 Rules
                             </Button>
                         </Link>
-                        <Link href="/venue">
+                        <Link href="/venue" className='flex items-center'>
                             <Button
                                 variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100"
+                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
-                                <MapPin className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-blue-600" />
+                                <MapPin className="flex-shrink-0 w-6 h-6 pr-1 text-blue-600"  width={24}
+                                    height={24}/>
                                 Venue Info
                             </Button>
                         </Link>
-                        <Link href="/donate" >
+                        <Link href="/support-us" >
+                            <Button
+                                variant="outline"
+                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                            >
+                                Get Involved
+                            </Button>
+                        </Link>
+                        <Link href="https://checkout.square.site/merchant/MLB8TY1QMQG6C/checkout/2CDTARWNLSSNSKDCUZF3SAFV?src=webqr" >
                             <Button
                                 variant="outline"
                                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-lg transform transition-transform hover:scale-105 text-white font-bold "
