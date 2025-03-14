@@ -12,7 +12,7 @@ export default function RegisterPage() {
             <header className="sticky top-0 z-10 bg-white border-b shadow-sm">
                 <div className="container flex items-center justify-between h-16 px-4 mx-auto">
                     <Link href="/" className="flex items-center space-x-2">
-                        <span className="text-xl font-bold text-blue-500">Kids' Contest</span>
+                        <span className="text-xl font-bold text-blue-500">Kids&apos; Contest</span>
                     </Link>
                     <nav className="flex items-center space-x-4">
                         <Link href="/rules">
@@ -47,7 +47,7 @@ export default function RegisterPage() {
 
                         <div className="p-4 mb-6 text-center bg-yellow-100 rounded-lg">
                             <p className="text-yellow-800">
-                                Fill out this form to pre-register for the contest. You'll still need to bring your entries on the
+                                Fill out this form to pre-register for the contest. You&apos;ll still need to bring your entries on the
                                 drop-off day (Friday, August 15, 2025, 8am-11am).
                             </p>
                         </div>

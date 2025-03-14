@@ -1,5 +1,5 @@
 import React from "react";
-import { CashAwardsData, ContestSection } from "./contest-data-restructured";
+import { ContestSection } from "@/lib/constants";
 
 interface TableProps {
     data: any;

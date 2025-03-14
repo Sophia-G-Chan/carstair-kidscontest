@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Menu, X, Award, Flower, Cake, Palette, Sparkles, Star, Calendar, Users, Baby} from "lucide-react"
 import { cn } from "@/lib/utils"
 
