@@ -36,7 +36,7 @@ export default function DonatePage() {
                     </div>
                     <div className="flex items-start p-4 bg-yellow-100 rounded-lg mt-6">
                         <p>
-                            Ready to make a difference? Contact  <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose </a>
+                            Ready to make a difference? Contact  <a className="mt-2 font-bold text-purple-800" href="mailto:carstairskidscontest@gmail.com">Rose Warden</a>
                             to start your donation today! Every dollar helps create more magical moments for Carstairs kids!
                         </p>
                     </div>
