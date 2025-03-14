@@ -23,7 +23,6 @@ function Footer() {
                         CarstairsAgSociety.ca
                     </a>
                 </p>
-                <p className="mt-4 text-sm">Ages 17 &amp; under</p>
             </div>
             <div className="absolute bottom-2 left-4 animate-bounce-slow hidden md:block">
                 <Cake size={24} className="text-pink-400" />

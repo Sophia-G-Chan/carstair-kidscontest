@@ -372,7 +372,7 @@ export default function RulePage() {
                                 className={` ${openSections["section8"]
                                     ? "grid-rows-[1fr] opacity-100"
                                     : "hidden m-0"}`}
-                                headerBgColor="bg-pink-400"
+                                headerBgColor="bg-pink-400 text-white"
                             />
 
 
@@ -396,7 +396,7 @@ export default function RulePage() {
                                 className={` ${openSections["section9"]
                                     ? "grid-rows-[1fr] opacity-100"
                                     : "hidden m-0"}`}
-                                headerBgColor="bg-pink-400"
+                                headerBgColor="bg-pink-400 text-white"
                             />
                         </div>
 
