@@ -1,28 +1,11 @@
+'use client'
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Flower, Palette, Cake, Award, Star, Sparkles } from "lucide-react";
+import { u5Categories, categories } from "@/lib/constants"
 
 export default function RulePage() {
-    const categories = [
-        'High Points in Show',
-        'High Points Flowers',
-        'High Points Vegetables',
-        'High Points Handicrafts',
-        'High Points Hobby Crafts and Artwork',
-        'High Points Baking',
-        'High Points Photography',
-        'Best in Show Sunflower',
-        'Best in Show Fairy Garden',
-        'Best in Show Vegetables',
-        'Best in Show Baking',
-        'Best in Show Handicrafts',
-        'Best in Show Hobby Crafts and Artwork',
-        'Best in Show Photography',
-    ];
-    const u5Categories = [
-        'Best in Show – Best entry from U1 – U9',
-        'Best in Show Colouring Page'
-    ];
+
 
     return (
         <main className="container px-4 py-8 mx-auto">
