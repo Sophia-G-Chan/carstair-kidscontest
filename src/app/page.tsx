@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { Button } from '../components/ui/button'
 import Image from "next/image";
-import { Flower, Palette, Cake, Award, ChefHat, Sparkles } from "lucide-react";
+import { Flower, Palette, Cake, Award, ChefHat, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
 		<main className="container px-4 py-8 mx-auto relative flex-1 overflow-hidden">
 
 			<Image
-				src="/plant.png"
+				src="/robot.png"
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute -left-5 top-5 transform -rotate-12 md:left-24"
+				className="absolute left-5 top-5 transform -rotate-12 md:left-24"
 				priority
 			/>
 			<div className="absolute top-40 left-60 animate-bounce-slow hidden md:block">
@@ -71,6 +71,7 @@ export default function Home() {
 						size="default">
 							<ChefHat className="w-6 h-6 mr-2" />
 							Ages 17 &amp; under, click here join the Fun!
+							<ArrowRight className="w-6 h-6 ml-2" />
 						</Button>
 					</Link>
 					<Link href="https://checkout.square.site/merchant/MLB8TY1QMQG6C/checkout/2CDTARWNLSSNSKDCUZF3SAFV?src=webqr" >
