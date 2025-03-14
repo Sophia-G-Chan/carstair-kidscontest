@@ -108,7 +108,8 @@ export default function Home() {
 						</ul>
 						<div className="flex flex-wrap justify-end gap-4 mt-3">
 							<Link href="/rules">
-								<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
+								<Button className="px-6 md:p-6 text-md md:text-lg font-bold text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
+								size="default">
 
 									See Contest Rules
 								</Button>
