@@ -1,13 +1,23 @@
 'use client'
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { Flower, Palette, Cake, Award, Star, Sparkles } from "lucide-react";
-import { u5Categories, categories } from "@/lib/constants"
+import { Flower, Palette, Cake, Award, Star, Sparkles, ChevronRight, Baby } from "lucide-react";
+import { cashAwardsData } from "@/lib/constants"
+import Table from "@/components/ui/table"
+import { useState } from "react";
+import { RulesSubmenu } from "@/components/RulesSubMenu";
 
 export default function RulePage() {
+    const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
+    const toggleSection = (id: string) => {
+        setOpenSections((prev) => ({ ...prev, [id]: !prev[id] }));
+    };
 
     return (
+    <>
+    <RulesSubmenu />
+
         <main className="container px-4 py-8 mx-auto">
             <div className="absolute top-120 left-20 animate-spin-slow hidden md:block">
                 <Sparkles size={30} className="text-purple-400" />
@@ -35,13 +45,13 @@ export default function RulePage() {
                     <h1 className="mb-6 text-3xl font-bold text-center text-blue-600">Contest Rules</h1>
 
                     <div className="space-y-6">
-
                         <a
                             href='https://drive.google.com/file/d/1AgcGxoGUfrFwcJB24ZPG5t95odfToQIy/view'
                             className="block p-4 text-center text-blue-600 bg-blue-100 rounded-xl border-2 border-blue-200 hover:bg-blue-200"
                         >Detailed PDF Rules Click Here</a>
 
-                        <div className="p-4 bg-yellow-100 rounded-xl border-2 border-yellow-200">
+                        <div id="important-dates"
+                        className="p-4 bg-yellow-100 rounded-xl border-2 border-yellow-200">
 
                             <h2 className="mb-2 text-xl font-bold text-yellow-800 flex items-center">
                                 <Star className="w-5 h-5 mr-2 text-yellow-600" />
@@ -58,7 +68,7 @@ export default function RulePage() {
                             </p>
                         </div>
 
-                        <div>
+                        <div id="general-rules">
                             <h2 className="mb-3 text-xl font-bold text-blue-700 flex items-center">
                                 <Award className="w-5 h-5 mr-2 text-blue-600" />
                                 General Rules
@@ -99,67 +109,233 @@ export default function RulePage() {
                             </ol>
                         </div>
 
-                        <div>
+                        <div id="category-rules">
                             <h2 className="mb-3 text-xl font-bold text-green-700 flex items-center">
                                 <Flower className="w-5 h-5 mr-2 text-green-600" />
                                 Category-Specific Rules
                             </h2>
 
                             <div className="space-y-4 mt-4">
-                                <div className="p-3 bg-green-50 rounded-lg border border-green-200">
+                                <div id="vegetables-flowers" className="p-3 bg-green-50 rounded-lg border border-green-200">
                                     <h3 className="mb-2 text-lg font-semibold text-green-700 flex items-center">
                                         <Flower className="w-4 h-4 mr-2 text-green-600" />
                                         Vegetables & Flowers
                                     </h3>
-                                    <ul className="pl-5 space-y-1 list-disc">
-                                        <li>All plants must be grown by the participant</li>
-                                        <li>Entries should be displayed in appropriate containers</li>
-                                        <li>Please label varieties if known</li>
+                                    <ul className="pl-5 space-y-1 list-disc mb-6">
+                                        <li>All vegetable and flower entries must be grown within Mountain View County.</li>
+                                        <li>Please no restricted or noxious weeds.</li>
+                                        <li>May place vegetables in plastic bag with slightly damp paper towel for freshness.</li>
+
                                     </ul>
+                                    <div className="space-y-2">
+                                        <button
+                                            onClick={() => toggleSection("section1")}
+                                            className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                        >
+                                            <div
+                                                className={`transform transition-transform duration-200 ${openSections["section1"] ? "rotate-90 mb-0" : ""
+                                                    }`}
+                                            >
+                                                <ChevronRight className="w-4 h-4 mr-2 mb-0 text-green-600" />
+                                            </div>
+                                            <h4 className="flex items-center text-lg font-semibold text-green-700">
+                                                Flower Categories
+                                            </h4>
+                                        </button>
+                                        <Table
+                                            data={cashAwardsData}
+                                            type="categories"
+                                            sectionName="Flower Section"
+                                            className={` ${openSections["section1"]
+                                                ? "grid-rows-[1fr] opacity-100"
+                                                : "hidden m-0"}`}
+                                            headerBgColor="bg-emerald-600"
+                                        />
+                                        <button
+                                            onClick={() => toggleSection("section2")}
+                                            className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                        >
+                                            <div
+                                                className={`transform transition-transform duration-200 ${openSections["section2"] ? "rotate-90 mb-0" : ""
+                                                    }`}
+                                            >
+                                                <ChevronRight className="w-4 h-4 mr-2 mb-0 text-green-600" />
+                                            </div>
+                                            <h4 className="flex items-center text-lg font-semibold text-green-700">
+                                                Vegetable Categories
+                                            </h4>
+                                        </button>
+                                        <Table
+                                            data={cashAwardsData}
+                                            type="categories"
+                                            sectionName="Vegetable Section"
+                                            className={`${openSections["section2"]
+                                                ? "grid-rows-[1fr] opacity-100"
+                                                : "hidden"}`}
+                                            headerBgColor="bg-emerald-600"
+                                        />
+                                    </div>
+
                                 </div>
 
-                                <div className="p-3 bg-pink-50 rounded-lg border border-pink-200">
+                                <div id="baking-cakes" className="p-3 bg-pink-50 rounded-lg border border-pink-200">
                                     <h3 className="mb-2 text-lg font-semibold text-pink-700 flex items-center">
                                         <Cake className="w-4 h-4 mr-2 text-pink-600" />
-                                        Baking & Cakes
+                                        Baking
                                     </h3>
-                                    <ul className="pl-5 space-y-1 list-disc">
-                                        <li>All baked goods must be made from scratch by the participant</li>
-                                        <li>Include recipe cards with your entries</li>
-                                        <li>Items should be presented on disposable plates covered with plastic wrap</li>
+                                    <ul className="pl-5 space-y-1 list-disc mb-6">
+                                        <li>Place on a plate or tray and put in a clear plastic bag - do not seal.</li>
                                     </ul>
+                                    <button
+                                        onClick={() => toggleSection("section3")}
+                                        className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                    >
+                                        <div
+                                            className={`transform transition-transform duration-200 ${openSections["section3"] ? "rotate-90 mb-0" : ""
+                                                }`}
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 mb-0 text-pink-700" />
+                                        </div>
+                                        <h4 className="flex items-center text-lg font-semibold text-pink-700">
+                                            Baking Categories
+                                        </h4>
+                                    </button>
+                                    <Table
+                                        data={cashAwardsData}
+                                        type="categories"
+                                        sectionName="Baking Section"
+                                        className={` ${openSections["section3"]
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "hidden m-0"}`}
+                                        headerBgColor="bg-rose-400"
+                                    />
                                 </div>
 
-                                <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
-                                    <h3 className="mb-2 text-lg font-semibold text-purple-700 flex items-center">
+                                <div id="hobbies-crafts" className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                                    <h3 className="mb-6 text-lg font-semibold text-purple-700 flex items-center">
                                         <Sparkles className="w-4 h-4 mr-2 text-purple-600" />
-                                        Hobbies & Crafts
+                                        Hobbies &amp; Crafts
                                     </h3>
-                                    <ul className="pl-5 space-y-1 list-disc">
-                                        <li>Crafts can include any handmade items</li>
-                                        <li>Include a brief description of materials used and techniques</li>
-                                        <li>Items should be ready for display</li>
-                                    </ul>
+                                    <button
+                                        onClick={() => toggleSection("section4")}
+                                        className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                    >
+                                        <div
+                                            className={`transform transition-transform duration-200 ${openSections["section4"] ? "rotate-90 mb-0" : ""
+                                                }`}
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 mb-0 text-purple-600" />
+                                        </div>
+                                        <h4 className="flex items-center text-lg font-semibold text-purple-600">
+                                            Handicraft Categories
+                                        </h4>
+                                    </button>
+                                    <Table
+                                        data={cashAwardsData}
+                                        type="categories"
+                                        sectionName="Handicraft Section"
+                                        className={` ${openSections["section4"]
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "hidden m-0"}`}
+                                        headerBgColor="bg-violet-200"
+                                    />
+                                    <button
+                                        onClick={() => toggleSection("section5")}
+                                        className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                    >
+                                        <div
+                                            className={`transform transition-transform duration-200 ${openSections["section5"] ? "rotate-90 mb-0" : ""
+                                                }`}
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 mb-0 text-purple-600" />
+                                        </div>
+                                        <h4 className="flex items-center text-lg font-semibold text-purple-600">
+                                            Hobby Crafts & Artwork Categories
+                                        </h4>
+                                    </button>
+                                    <Table
+                                        data={cashAwardsData}
+                                        type="categories"
+                                        sectionName="Hobby Crafts & Artwork Section"
+                                        className={` ${openSections["section5"]
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "hidden m-0"}`}
+                                        headerBgColor="bg-violet-200"
+                                    />
                                 </div>
 
-                                <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                                <div id="artwork-photography" className="p-3 bg-blue-50 rounded-lg border border-blue-200">
                                     <h3 className="mb-2 text-lg font-semibold text-blue-700 flex items-center">
                                         <Palette className="w-4 h-4 mr-2 text-blue-600" />
-                                        Artwork & Photography
+                                        Photography
                                     </h3>
-                                    <ul className="pl-5 space-y-1 list-disc">
-                                        <li>Artwork can be in any medium</li>
-                                        <li>Photography must be taken by the participant</li>
-                                        <li>All entries should be mounted or framed for display</li>
-                                        <li>Maximum size: 16&quot; x 20&quot;</li>
+                                    <ul className="pl-5 space-y-1 list-disc mb-6">
+                                        <li>Photos may be black & white or color, 4 X 6 or 5 X 7 inches (10 X 15 cm or 12.5 X 17.5 cm).</li>
+                                        <li>All photos must be mounted on a stiff backing or cardstock, with a 1/2 inch (1.5 cm) border.</li>
+                                        <li>All photographs must be original work.</li>
                                     </ul>
+                                    <button
+                                        onClick={() => toggleSection("section6")}
+                                        className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                    >
+                                        <div
+                                            className={`transform transition-transform duration-200 ${openSections["section6"] ? "rotate-90 mb-0" : ""
+                                                }`}
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 mb-0 text-blue-700" />
+                                        </div>
+                                        <h4 className="flex items-center text-lg font-semibold text-blue-700">
+                                            Photography Categories
+                                        </h4>
+                                    </button>
+                                    <Table
+                                        data={cashAwardsData}
+                                        type="categories"
+                                        sectionName="Photography Section"
+                                        className={`" ${openSections["section6"]
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "hidden m-0"}`}
+                                        headerBgColor="bg-blue-400"
+                                    />
+
+                                </div>
+
+                                <div id="five-and-under" className="p-3 bg-orange-50 rounded-lg border border-orange-200">
+                                    <h3 className="mb-6 text-lg font-semibold text-orange-700 flex items-center">
+                                        <Baby className="w-4 h-4 mr-2 text-orange-600" />
+                                        5 Years Old &amp; Under
+                                    </h3>
+                                    <button
+                                        onClick={() => toggleSection("section7")}
+                                        className="flex items-center  gap-2 rounded-lg w-full text-left"
+                                    >
+                                        <div
+                                            className={`transform transition-transform duration-200 ${openSections["section7"] ? "rotate-90 mb-0" : ""
+                                                }`}
+                                        >
+                                            <ChevronRight className="w-4 h-4 mr-2 mb-0 text-orange-600" />
+                                        </div>
+                                        <h4 className="flex items-center text-lg font-semibold text-orange-600">
+                                            5 Years Old &amp; Younger Categories
+                                        </h4>
+                                    </button>
+                                    <Table
+                                        data={cashAwardsData}
+                                        type="categories"
+                                        sectionName="5 Years Old & Younger Section"
+                                        className={`" ${openSections["section7"]
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "hidden m-0"}`}
+                                        headerBgColor="text-orange-400"
+                                    />
+
                                 </div>
                             </div>
                         </div>
 
-                        <div className="p-4 bg-blue-100 rounded-xl border-2 border-blue-200">
-                            <h2 className="mb-2 text-xl font-bold text-blue-800 flex items-center">
-                                <Star className="w-5 h-5 mr-2 text-blue-600" />
+                        <div id="team-entries" className="p-4 bg-yellow-100 rounded-xl border-2 border-yellow-200">
+                            <h2 className="mb-2 text-xl font-bold text-yellow-800 flex items-center">
+                                <Star className="w-5 h-5 mr-2 text-yellow-600" />
                                 New This Year!
                             </h2>
                             <p className="mb-2 font-bold">Team & Family Entries</p>
@@ -170,67 +346,58 @@ export default function RulePage() {
                             </ul>
                         </div>
 
-                        <div>
-
-                            <h2 className="mb-3 text-xl font-bold text-red-700 flex items-center">
-                                <Award className="w-5 h-5 mr-2 text-red-600" />
+                        <div id="judging-prizes" className="transition-all p-3 rounded-lg duration-300 bg-pink-300 ">
+                            <h2 className="mb-3 text-xl font-bold text-white flex items-center">
+                                <Award className="w-5 h-5 mr-2 text-white" />
                                 Prizes
                             </h2>
-                            <p className="mb-6">Cash awards are available for the following:</p>
-                            <h3 className="font-bold">Ages 5 &amp; Under</h3>
-                            <div className="overflow-x-auto rounded-t-xl mb-6 ">
-                                <table className="min-w-full bg-white border border-gray-300 rounded-xl">
-                                    <thead>
-                                        <tr className="bg-blue-200">
-                                            <th className="px-6 py-3 border-b text-left">Category</th>
-                                            <th className="px-6 py-3 border-b text-center">Individual</th>
-                                            <th className="px-6 py-3 border-b text-center">Group</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {u5Categories.map((category, index) => (
-                                            <tr key={index} className="hover:bg-blue-50">
-                                                <td className="px-6 py-2 border-b">{category}</td>
-                                                <td className="px-6 py-2 border-b text-center">
-                                                    $10
-                                                </td>
-                                                <td className="px-6 py-2 border-b text-center">
-                                                    $10
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                            <h3 className="font-bold">Ages 6 &amp; Up</h3>
-                            <div className="overflow-x-auto rounded-t-xl ">
-                                <table className="min-w-full bg-white border border-gray-300 rounded-xl">
-                                    <thead>
-                                        <tr className="bg-blue-200">
-                                            <th className="px-6 py-3 border-b text-left">Category</th>
-                                            <th className="px-6 py-3 border-b text-center">Ages 6-10 Individual</th>
-                                            <th className="px-6 py-3 border-b text-center">Ages 11-17 Individual</th>
-                                            <th className="px-6 py-3 border-b text-center">Group</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {categories.map((category, index) => (
-                                            <tr key={index} className="hover:bg-blue-50">
-                                                <td className="px-6 py-2 border-b">{category}</td>
-                                                <td className="px-6 py-2 border-b text-center">
-                                                    {index === 0 ? '$20' : '$10'}
-                                                </td>
-                                                <td className="px-6 py-2 border-b text-center">
-                                                    {index === 0 ? '$20' : '$10'}
-                                                </td>
-                                                <td className="px-6 py-2 border-b text-center">
-                                                    {index === 0 ? '$20' : '$10'}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            <p className="mb-6 text-white">Cash awards are available for the following:</p>
+                            <button
+                                onClick={() => toggleSection("section8")}
+                                className="flex items-center  gap-2 rounded-lg w-full text-left"
+                            >
+                                <div
+                                    className={`transform transition-transform duration-200 ${openSections["section8"] ? "rotate-90 mb-0" : ""
+                                        }`}
+                                >
+                                    <ChevronRight className="w-4 h-4 mr-2 mb-0 text-white" />
+                                </div>
+                                <h4 className="flex items-center text-lg font-semibold text-white">
+                                    Ages 5 &amp; Under
+                                </h4>
+                            </button>
+                            <Table
+                                data={cashAwardsData}
+                                type="age5AndUnderAwards"
+                                className={` ${openSections["section8"]
+                                    ? "grid-rows-[1fr] opacity-100"
+                                    : "hidden m-0"}`}
+                                headerBgColor="bg-pink-400"
+                            />
+
+
+                            <button
+                                onClick={() => toggleSection("section9")}
+                                className="flex items-center  gap-2 rounded-lg w-full text-left"
+                            >
+                                <div
+                                    className={`transform transition-transform duration-200 ${openSections["section9"] ? "rotate-90 mb-0" : ""
+                                        }`}
+                                >
+                                    <ChevronRight className="w-4 h-4 mr-2 mb-0 text-white" />
+                                </div>
+                                <h4 className="flex items-center text-lg font-semibold text-white">
+                                    Ages 6 &amp; Up
+                                </h4>
+                            </button>
+                            <Table
+                                data={cashAwardsData}
+                                type="mainAwards"
+                                className={` ${openSections["section9"]
+                                    ? "grid-rows-[1fr] opacity-100"
+                                    : "hidden m-0"}`}
+                                headerBgColor="bg-pink-400"
+                            />
                         </div>
 
                         <div className="p-4 text-center bg-purple-100 rounded-xl border-2 border-purple-200">
@@ -240,6 +407,7 @@ export default function RulePage() {
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
+        </>
     );
 }

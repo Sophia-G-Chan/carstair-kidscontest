@@ -1,152 +1,274 @@
-export const categories = [
-    'High Points in Show',
-    'High Points Flowers',
-    'High Points Vegetables',
-    'High Points Handicrafts',
-    'High Points Hobby Crafts and Artwork',
-    'High Points Baking',
-    'High Points Photography',
-    'Best in Show Sunflower',
-    'Best in Show Fairy Garden',
-    'Best in Show Vegetables',
-    'Best in Show Baking',
-    'Best in Show Handicrafts',
-    'Best in Show Hobby Crafts and Artwork',
-    'Best in Show Photography',
-];
-export const u5Categories = [
-    'Best in Show – Best entry from U1 – U9',
-    'Best in Show Colouring Page'
-];
+export interface Category {
+    code: string;
+    description: string;
+}
 
-export const FairSections = {
-    flower: {
-        note: "No specific preparation note",
-        awards: ["Cash award for Best in Show Sunflower", "Cash award for Best in Show Fairy Garden"],
-        categories: {
-            JF1: "Sweet Pea - 4 stems, no foliage, jar",
-            JF3: "Cosmos - 3 blooms, jar",
-            JF4: "Aster - 3 blooms, jar",
-            JF5: "Zinnia - 2 blooms, jar",
-            JF6: "Daisy - 3 stems, jar",
-            JF8: "Sunflower - 1 large",
-            JF9: "Marigold - 3 blooms",
-            JF10: "Miniature Flower Arrangement - over all height 3(7.5 cm) or less",
-            JF11: "Wild Mixed Arrangement - grass, flowers, grains, etc.may be used.NO NOXIOUS WEEDS(i.e.Toad Flax) ",
-            JF12: "Garden Flower Mixed Bouquet",
-            JF13: "Fairy Garden"
+export interface ContestSection {
+    name: string;
+    categories: Category[];
+    cashAwards: Record<string, number>;
+}
+
+export interface AwardsByCategory {
+    [award: string]: {
+        "Ages 6-10 Individual": number;
+        "Ages 11-17 Individual": number;
+        "Group": number;
+    };
+}
+
+export interface AgeGroup5AndUnder {
+    [award: string]: {
+        "Individual": number;
+        "Group": number;
+    };
+}
+
+export interface CashAwardsData {
+    // Restructured to have awards as keys and age groups as values
+    mainAwards: AwardsByCategory;
+
+    // For 5 and under awards which have a different structure
+    age5AndUnderAwards: AgeGroup5AndUnder;
+
+    contestSections: ContestSection[];
+}
+
+// Cash Awards Data
+export const cashAwardsData: CashAwardsData = {
+    // Restructured awards with age groups as columns
+    mainAwards: {
+        "High Points in Show": {
+            "Ages 6-10 Individual": 20,
+            "Ages 11-17 Individual": 20,
+            "Group": 20
+        },
+        "High Points Flowers": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "High Points Vegetables": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "High Points Handicrafts": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "High Points Hobby Crafts and Artwork": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "High Points Baking": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "High Points Photography": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Sunflower": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Fairy Garden": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Vegetables": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Baking": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Handicrafts": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Hobby Crafts and Artwork": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Photography": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
         }
     },
-    vegetable: {
-        note: "May place vegetables in plastic bag with slightly damp paper towel for freshness.",
-        awards: ["Cash award for Best in Show Vegetable"],
-        categories: {
-            JV1: "Beans - 3, any variety, 1⁄2inch(.5 cm) stem left on",
-            JV2: "Beets - 3 round, trimmed to 1⁄2inch(.5 cm) top",
-            JV3: "Peas - 4 pods, 1⁄2inch(.5 cm) stem left on",
-            JV4: "Carrots – 3, trimmed to 1⁄2inch(.5 cm) top, roots trimmed",
-            JV5: "Onions - 2, not peeled",
-            JV6: "Potato - 2, any variety",
-            JV7: "Vegetable - any other",
-            JV8: "Cucumber - 2, any variety, 1⁄2inch(.5 cm) stem attached",
-            JV9: "Novelty arrangement - may be made from vegetables, fruit, flowers or anything from the garden.No artificial parts",
-            JV10: "Novelty shaped vegetable – any kind",
-            JV11: "Zucchini - one large, over 10inch(25.4 cm), 1⁄2inch(1 cm) stem left on"
+
+    // Ages 5 & Under awards
+    age5AndUnderAwards: {
+        "Best in Show - Best entry from U1 - U9": {
+            "Individual": 10,
+            "Group": 10
+        },
+        "Best in Show Colouring Page": {
+            "Individual": 10,
+            "Group": 10
         }
     },
-    baking: {
-        note: "Place on a plate or tray and put in a clear plastic bag - do not seal.",
-        awards: ["Cash award for Best in Show Baking"],
-        categories: {
-            JB1: "Any Cake - out of pan, iced & decorated",
-            JB2: "Candy Arrangement",
-            JB4: "Brownies - 4 iced",
-            JB5: "Bread - 1 loaf, out of pan",
-            JB6: "Cookies - 4, one kind",
-            JB7: "Monster Cookie - 1 only, no larger than 6 inches(15 cm)",
-            JB8: "Muffins – 4, not bran",
-            JB9: "Cup Cakes – 4, iced & decorated",
-            JB10: "Rice Krispie - figures or creation.All decorating or colouring must be edible",
-            JB11: "Chocolates - 4 pieces"
+
+    // Contest Categories by Section
+    contestSections: [
+        {
+            name: "Flower Section",
+            categories: [
+                { code: "JF1", description: "Sweet Pea - 4 stems, no foliage, jar" },
+                { code: "JF3", description: "Cosmos - 3 blooms, jar" },
+                { code: "JF4", description: "Aster - 3 blooms, jar" },
+                { code: "JF5", description: "Zinnia - 2 blooms, jar" },
+                { code: "JF6", description: "Daisy - 3 stems, jar" },
+                { code: "JF8", description: "Sunflower - 1 large" },
+                { code: "JF9", description: "Marigold - 3 blooms" },
+                { code: "JF10", description: "Miniature Flower Arrangement - overall height 3\" (7.5 cm) or less." },
+                { code: "JF11", description: "Wild Mixed Arrangement - grass, flowers, grains, etc. NO NOXIOUS WEEDS" },
+                { code: "JF12", description: "Garden Flower Mixed Bouquet" },
+                { code: "JF13", description: "Fairy Garden" }
+            ],
+            cashAwards: {
+                "Best in Show Sunflower": 10,
+                "Best in Show Fairy Garden": 10
+            }
+        }, {
+            name: "Vegetable Section",
+            categories: [
+                { code: "JV1", description: "Beans - 3, any variety, ½\" (.5 cm) stem left on" },
+                { code: "JV2", description: "Beets - 3 round, trimmed to ½\" (.5 cm) top" },
+                { code: "JV3", description: "Peas - 4 pods, ½\" (.5 cm) stem left on" },
+                { code: "JV4", description: "Carrots – 3, trimmed to ½\" (.5 cm) top, roots trimmed" },
+                { code: "JV5", description: "Onions - 2, not peeled" },
+                { code: "JV6", description: "Potato - 2, any variety" },
+                { code: "JV7", description: "Vegetable - any other" },
+                { code: "JV8", description: "Cucumber - 2, any variety, ½\" (.5 cm) stem attached" },
+                { code: "JV9", description: "Novelty arrangement - may be made from vegetables, fruit, flowers or anything from the garden. No artificial parts" },
+                { code: "JV10", description: "Novelty shaped vegetable – any kind" },
+                { code: "JV11", description: "Zucchini - one large, over 10\" (25.4 cm), ½\" (1 cm) stem left on" }
+            ],
+            cashAwards: {
+                "Best in Show Vegetables": 10
+            }
+        },
+        {
+            name: "Baking Section",
+            categories: [
+                { code: "JB1", description: "Any Cake - out of pan, iced & decorated" },
+                { code: "JB2", description: "Candy Arrangement" },
+                { code: "JB4", description: "Brownies - 4 iced" },
+                { code: "JB5", description: "Bread - 1 loaf, out of pan" },
+                { code: "JB6", description: "Cookies - 4, one kind" },
+                { code: "JB7", description: "Monster Cookie - 1 only, no larger than 6 inches (15 cm)" },
+                { code: "JB8", description: "Muffins – 4, not bran" },
+                { code: "JB9", description: "Cup Cakes – 4, iced & decorated" },
+                { code: "JB10", description: "Rice Krispie - figures or creation. All decorating or colouring must be edible." },
+                { code: "JB11", description: "Chocolates - 4 pieces" }
+            ],
+            cashAwards: {
+                "Best in Show Baking": 10
+            }
+        },
+        {
+            name: "Handicraft Section",
+            categories: [
+                { code: "JH1", description: "Knitting - any article" },
+                { code: "JH2", description: "Crochet - any article" },
+                { code: "JH3", description: "Cross stitch - any article" },
+                { code: "JH4", description: "Embroidery - any article" },
+                { code: "JH5", description: "Sewing - any article" },
+                { code: "JH6", description: "Bead Work - any article" },
+                { code: "JH7", description: "Recycled article - something new from something old (using yarns, thread or fabric)" },
+                { code: "JH8", description: "Macrame – any article" },
+                { code: "JH9", description: "Open - any article not in above classes" }
+            ],
+            cashAwards: {
+                "Best in Show Handicraft": 10
+            }
+        },
+        {
+            name: "Hobby Crafts & Artwork Section",
+            categories: [
+                { code: "JH10", description: "Wood work - any article" },
+                { code: "JH11", description: "Doll or toy - any medium" },
+                { code: "JH12", description: "Holiday decoration - any article" },
+                { code: "JH16", description: "Models - from kit" },
+                { code: "JH17", description: "LEGO – transportation (boat, car, plane, spaceship etc.) Base maximum size 16\" X 16\" (41 cm X 41 cm). No kits, must be an original creation." },
+                { code: "JH18", description: "LEGO - technical or mechanical. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "JH19", description: "LEGO – buildings. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "JH20", description: "LEGO – other, i.e. scenery, animals. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "JH21", description: "Mounted collection - stamps, coins, etc." },
+                { code: "JH22", description: "String Art - any article" },
+                { code: "JH23", description: "Dough Art - any article" },
+                { code: "JH24", description: "Jewelry – any" },
+                { code: "JH25", description: "Ceramics or Pottery - any article" },
+                { code: "JH26", description: "Open Hobby Craft Item - any hobby article not listed above" },
+                { code: "JA1", description: "Oil or Acrylic Painting - mounted on stiff backing" },
+                { code: "JA2", description: "Water Colour - mounted on stiff backing" },
+                { code: "JA3", description: "Pencil Sketch - black and white, pencil, pen, ink, charcoal" },
+                { code: "JA4", description: "Pencil Sketch - colour, crayon, pencil crayon" },
+                { code: "JA5", description: "Pastel - chalk, oil chalk, etc., mounted on stiff backing" },
+                { code: "JA6", description: "Open art work - not in any other art work class" },
+                { code: "JA7", description: "Computer Design - original, i.e. greeting card, invitations, etc." },
+                { code: "JA8", description: "Handcrafted Greeting Card - not done by computer" },
+                { code: "JA9", description: "Collage - collection of photos, pictures, items, mounted on stiff backing" },
+                { code: "JA10", description: "Scrapbook Page - any kind, any size" },
+                { code: "JA11", description: "Adult Colouring Book Page - Pencil crayon" }
+            ],
+            cashAwards: {
+                "Best in Show Hobby Crafts & Artwork": 10
+            }
+        },
+        {
+            name: "Photography Section",
+            categories: [
+                { code: "JH30", description: "Action/Movement - i.e. Sports" },
+                { code: "JH31", description: "Agriculture" },
+                { code: "JH32", description: "Landscape" },
+                { code: "JH33", description: "Waterscape" },
+                { code: "JH34", description: "People/Person" },
+                { code: "JH36", description: "Animal or bird - domestic (i.e. livestock)" },
+                { code: "JH37", description: "Animal or bird – wild" },
+                { code: "JH38", description: "Pet(s)" },
+                { code: "JH39", description: "Carstairs Area" },
+                { code: "JH40", description: "Garden - flowers, plants, trees or garden" },
+                { code: "JH41", description: "Still Life style" },
+                { code: "JH42", description: "Selfie - take a photo of yourself by yourself (Individual entry only)" },
+                { code: "JH43", description: "Open class - any subject not covered above" }
+            ],
+            cashAwards: {
+                "Best in Show Photography": 10
+            }
+        },
+        {
+            name: "5 Years Old & Younger Section",
+            categories: [
+                { code: "U6-1", description: "Cookies – plate of 3" },
+                { code: "U6-2", description: "Decorated Cupcakes – 3" },
+                { code: "U6-3", description: "Rice Krispie Figure or Creation. All decorating or colouring must be edible." },
+                { code: "U6-4", description: "Play Dough or Play Clay Creation" },
+                { code: "U6-5", description: "Duplo or LEGO Creation. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "U6-6", description: "Painted Rock Art" },
+                { code: "U6-7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
+                { code: "U6-8", description: "Any other craft article" },
+                { code: "U6-9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
+                { code: "U6-10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
+            ],
+            cashAwards: {
+                "Best in Show - Best entry from U1 - U9": 10,
+                "Best in Show Colouring Page": 10
+            }
         }
-    }, handicraft: {
-        note: "",
-        awards: ["Cash award for Best in Show Handicraft"],
-        categories: {
-            JH1: "Knitting - any article",
-            JH2: "Crochet - any article",
-            JH3: "Cross stitch - any article",
-            JH4: "Embroidery - any article",
-            JH5: "Sewing - any article",
-            JH6: "Bead Work - any article",
-            JH7: "Recycled article - something new from something old(using yarns, thread or fabric)",
-            JH8: "Macrame – any article",
-            JH9: "Open - any article not in above classes"
-        }
-    },
-    hobbyCraftsAndArtwork: {
-        note: "",
-        awards: ["Cash award for Best in Show Hobby Crafts & Artwork"],
-        categories: {
-            JH10: "Wood work - any article",
-            JH11: "Doll or toy - any medium",
-            JH12: "Holiday decoration - any article",
-            JH16: "Models - from kit",
-            JH17: "LEGO – transportation(boat, car, plane, spaceship etc.) Base maximum size 16 inches X 16 inches (41 cm X 41 cm). No kits, must be an original creation",
-            JH18: "LEGO - technical or mechanical.Base no larger than 16inches X 16inches (41cmX41cm) No kits, must be an original creation",
-            JH19: "LEGO – buildings.Base no larger than 16inches X 16inches(41cmX41cm) No kits, must be an original creation",
-            JH20: "LEGO – other, i.e.scenery, animals.Base no larger than 16inches X 16inches(41cmX41cm) No kits, must be an original creation",
-            JH21: "Mounted collection - stamps, coins, etc.",
-            JH22: "String Art - any article",
-            JH23: "Dough Art - any article",
-            JH24: "Jewelry – any",
-            JH25: "Ceramics or Pottery - any article",
-            JH26: "Open Hobby Craft Item - any hobby article not listed above",
-            JA1: "Oil or Acrylic Painting - mounted on stiff backing",
-            JA2: "Water Colour - mounted on stiff backing",
-            JA3: "Pencil Sketch - black and white, pencil, pen, ink, charcoal",
-            JA4: "Pencil Sketch - colour, crayon, pencil crayon",
-            JA5: "Pastel - chalk, oil chalk, etc., mounted on stiff backing",
-            JA6: "Open art work - not in any other art work class",
-            JA7: "Computer Design - original, i.e.greeting card, invitations, etc.",
-            JA8: "Handcrafted Greeting Card - not done by computer",
-            JA9: "Collage - collection of photos, pictures, items, mounted on stiff backing",
-            JA10: "Scrapbook Page - any kind, any size",
-            JA11: "Adult Colouring Book Page - Pencil crayon"
-        }
-    },
-    photography: {
-        note: "Photos may be black & white or color, 4 X 6 or 5 X 7(10 X 15 cm or 12.5 X 17.5 cm).All photos must be mounted on a stiff backing or cardstock, with a 1 / 2 inch(1.5 cm) border. All photographs must be original work.",
-        awards: ["Cash award for Best in Show Photography"],
-        categories: {
-            JH30: "Action / Movement - i.e.Sports",
-            JH31: "Agriculture",
-            JH32: "Landscape",
-            JH33: "Waterscape",
-            JH34: "People / Person",
-            JH36: "Animal or bird - domestic(i.e.livestock)",
-            JH37: "Animal or bird – wild",
-            JH38: "Pet(s)",
-            JH39: "Carstairs Area",
-            JH40: "Garden - flowers, plants, trees or garden",
-            JH41: "Still Life style",
-            JH42: "Selfie - take a photo of yourself by yourself(Individual entry only)",
-            JH43: "Open class - any subject not covered above"
-        }
-    },
-    fiveYearsAndYounger: {
-        note: "",
-        awards: ["Cash award for Best in Show Contest Colouring Book Page", "Cash award for Best in Show – Best entry from U1 – U9"],
-        categories: {
-            "U6 - 1": "Cookies – plate of 3",
-            "U6 - 2": "Decorated Cupcakes – 3",
-            "U6 - 3": "Rice Krispie Figure or Creation. All decorating or colouring must be edible",
-            "U6 - 4": "Play Dough or Play Clay Creation",
-            "U6 - 5": "Duplo or LEGO Creation.Base no larger than 16inches X 16inches(41cmX41cm) No kits, must be an original creation",
-            "U6 - 6": "Painted Rock Art", "U6 - 7": "Seed Picture – any seeds, on card stock, no larger than 8 and 1⁄2 inches X 11inches(21.5X28cm)",
-            "U6 - 8": "Any other craft article",
-            "U6 - 9": "Contest Colouring Book Page – available at the Carstairs Co - op and Carstairs Public Library, or attached at the end of this booklet.Crayon or pencil crayon only",
-            "U6 - 10": "Mud Pie.Garden mud in a foil plate, decorated with anything from the garden"
-        }
-    }
+    ]
 };
