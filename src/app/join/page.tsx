@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowLeft } from "lucide-react"
+import EntryFormFiller from "@/components/form"
+import EntryFormFillerTwo from "@/components/form2"
 
 export default function RegisterPage() {
     return (
@@ -26,7 +28,8 @@ export default function RegisterPage() {
                                 drop-off day (Friday, August 15, 2025, 8am-11am).
                             </p>
                         </div>
-
+                        {/* <EntryFormFiller /> */}
+                        <EntryFormFillerTwo />
                         <form className="space-y-6">
                             <div className="space-y-4">
                                 <h2 className="text-xl font-bold text-blue-700">Participant Information</h2>

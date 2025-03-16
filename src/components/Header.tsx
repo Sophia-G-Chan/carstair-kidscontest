@@ -61,6 +61,16 @@ function Header() {
                                                 Venue Info
                                             </Button>
                                         </Link>
+                                        <Link href="/join" onClick={handleNav}>
+                                            <Button
+                                                variant="default"
+                                                className="font-medium text-blue-600 hover:bg-blue-100"
+                                                size='lg'
+                                            >
+
+                                                Register
+                                            </Button>
+                                        </Link>
                                         <Link href="/get-involved"  onClick={handleNav}>
                                             <Button
                                                 variant="default"
@@ -108,6 +118,14 @@ function Header() {
                                 <MapPin className="flex-shrink-0 w-6 h-6 pr-1 text-blue-600"  width={24}
                                     height={24}/>
                                 Venue Info
+                            </Button>
+                        </Link>
+                        <Link href="/join" >
+                            <Button
+                                variant="outline"
+                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                            >
+                                Register
                             </Button>
                         </Link>
                         <Link href="/support-us" >
