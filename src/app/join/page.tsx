@@ -1,12 +1,7 @@
 
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowLeft } from "lucide-react"
-import EntryFormFiller from "@/components/form"
-import EntryFormFillerTwo from "@/components/form2"
+import Image from "next/image"
 
 export default function RegisterPage() {
     return (
@@ -24,153 +19,27 @@ export default function RegisterPage() {
 
                         <div className="p-4 mb-6 text-center bg-yellow-100 rounded-lg">
                             <p className="text-yellow-800">
-                                Fill out this form to pre-register for the contest. You&apos;ll still need to bring your entries on the
-                                drop-off day (Friday, August 15, 2025, 8am-11am).
+                                Bring the form below on Friday, August 15, 2025, 8am-11am along with the entry tags to register for the Carstairs Kids Contest.
                             </p>
                         </div>
-                        {/* <EntryFormFiller /> */}
-                        <EntryFormFillerTwo />
-                        <form className="space-y-6">
-                            <div className="space-y-4">
-                                <h2 className="text-xl font-bold text-blue-700">Participant Information</h2>
+                        <div className=" p-4 rounded-lg overflow-hidden mb-6 shadow-md">
+                            <h2 className="font-bold text-xl mb-4">Example Entry Tag </h2>
+                            <Image
+                                src="/entry-tag.png"
+                                alt="Entry Form"
+                                width={600}
+                                height={400}
+                                className="mx-auto mb-4"
+                            />
+                        </div>
 
-                                <div className="grid gap-4 md:grid-cols-2">
-                                    <div className="space-y-2">
-                                        <label htmlFor="firstName" className="block text-sm font-medium">
-                                            First Name
-                                        </label>
-                                        <Input id="firstName" placeholder="First Name" required />
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label htmlFor="lastName" className="block text-sm font-medium">
-                                            Last Name
-                                        </label>
-                                        <Input id="lastName" placeholder="Last Name" required />
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="age" className="block text-sm font-medium">
-                                        Age
-                                    </label>
-                                    <Input id="age" type="number" min="1" max="17" placeholder="Age" required />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="parentEmail" className="block text-sm font-medium">
-                                        Parent/Guardian Email
-                                    </label>
-                                    <Input id="parentEmail" type="email" placeholder="Email" required />
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="phone" className="block text-sm font-medium">
-                                        Phone Number
-                                    </label>
-                                    <Input id="phone" type="tel" placeholder="Phone Number" required />
-                                </div>
-                            </div>
-
-                            <div className="pt-4 space-y-4 border-t">
-                                <h2 className="text-xl font-bold text-green-700">Entry Information</h2>
-
-                                <div className="space-y-3">
-                                    <p className="font-medium">Which categories will you be entering? (Select all that apply)</p>
-
-                                    <div className="flex items-center space-x-2">
-                                        <Checkbox id="vegetables" />
-                                        <label
-                                            htmlFor="vegetables"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            Vegetables &amp; Flowers
-                                        </label>
-                                    </div>
-
-                                    <div className="flex items-center space-x-2">
-                                        <Checkbox id="baking" />
-                                        <label
-                                            htmlFor="baking"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            Baking &amp; Cakes
-                                        </label>
-                                    </div>
-
-                                    <div className="flex items-center space-x-2">
-                                        <Checkbox id="crafts" />
-                                        <label
-                                            htmlFor="crafts"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            Hobbies &amp; Crafts
-                                        </label>
-                                    </div>
-
-                                    <div className="flex items-center space-x-2">
-                                        <Checkbox id="artwork" />
-                                        <label
-                                            htmlFor="artwork"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            Artwork &amp; Photography
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div className="space-y-2">
-                                    <label htmlFor="entryDescription" className="block text-sm font-medium">
-                                        Brief Description of Your Entries
-                                    </label>
-                                    <Textarea
-                                        id="entryDescription"
-                                        placeholder="Please describe what you plan to enter in the contest"
-                                        className="h-24"
-                                    />
-                                </div>
-
-                                <div className="flex items-start space-x-2">
-                                    <Checkbox id="teamEntry" />
-                                    <div>
-                                        <label
-                                            htmlFor="teamEntry"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            This is a team/family entry
-                                        </label>
-                                        <p className="text-xs text-gray-500">
-                                            Check this box if multiple children worked on the entry together
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="pt-4 space-y-4 border-t">
-                                <div className="flex items-start space-x-2">
-                                    <Checkbox id="termsAgree" required />
-                                    <div>
-                                        <label
-                                            htmlFor="termsAgree"
-                                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                        >
-                                            I agree to the contest rules
-                                        </label>
-                                        <p className="text-xs text-gray-500">
-                                            By checking this box, you confirm that you have read and agree to the
-                                            <Link href="/rules" className="ml-1 text-blue-500 hover:underline">
-                                                contest rules
-                                            </Link>
-                                            .
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <Button  className="w-full py-6 text-lg font-bold">
-                                    Submit Registration
-                                </Button>
-                            </div>
-                        </form>
+                        <div className="border  rounded-lg overflow-hidden">
+                            <iframe
+                                src='/entry-form.pdf'
+                                className="w-full h-250"
+                                title="Entry Form PDF"
+                            />
+                        </div>
                     </div>
                 </div>
             </main>

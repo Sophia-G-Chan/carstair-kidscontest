@@ -285,13 +285,7 @@ const EntryFormFiller: React.FC = () => {
             {pdfUrl && (
                 <div className="mt-6 border-t pt-4">
                     <h3 className="font-medium mb-2">Your completed form:</h3>
-                    <div className="border rounded-lg overflow-hidden">
-                        <iframe
-                            src={pdfUrl}
-                            className="w-full h-96"
-                            title="Filled Entry Form PDF"
-                        />
-                    </div>
+
                     <div className="mt-2 flex justify-end">
                         <a
                             href={pdfUrl}
