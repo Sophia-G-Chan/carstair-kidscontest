@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { Button } from '../components/ui/button'
 import Image from "next/image";
-import { Flower, Palette, Cake, Award, ChefHat, Sparkles } from "lucide-react";
+import { Flower, Palette, Cake, Award, ChefHat, Sparkles, ArrowRight } from "lucide-react";
 
 export default function Home() {
 	return (
 		<main className="container px-4 py-8 mx-auto relative flex-1 overflow-hidden">
 
 			<Image
-				src="/cupcake.png"
+				src="/robot.png"
 				alt="Kids Contest Poster"
 				width={100}
 				height={100}
-				className="absolute left-0 top-5 transform -rotate-12 md:left-24"
+				className="absolute left-5 top-5 transform -rotate-12 md:left-24"
 				priority
 			/>
 			<div className="absolute top-40 left-60 animate-bounce-slow hidden md:block">
@@ -49,10 +49,10 @@ export default function Home() {
 
 			<section className="flex flex-col items-center justify-center text-center">
 				<div className="max-w-4xl mb-8 relative">
-					<h1 className="mb-4 text-5xl font-extrabold tracking-tight md:text-6xl">
-						<span className="block text-blue-500 drop-shadow-md animate-float ">MAKE</span>
-						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300">BAKE</span>
-						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 ">&amp; GROW</span>
+					<h1 className="mb-4 text-7xl font-extrabold tracking-tight md:text-10xl ">
+						<span className={`block text-blue-500 drop-shadow-lg animate-float chewy-text`}>Make</span>
+						<span className="block text-red-500 drop-shadow-md animate-float animation-delay-300 chewy-text">Bake</span>
+						<span className="block text-green-500 drop-shadow-md animate-float animation-delay-600 chewy-text">&amp; Grow</span>
 					</h1>
 					<div className="absolute top-0 right-0 transform translate-x-full -translate-y-1/4 animate-spin-slow">
 						<Sparkles className="text-yellow-400 w-8 h-8" />
@@ -64,10 +64,24 @@ export default function Home() {
 
 				<h2 className="mb-6 text-4xl font-bold text-black drop-shadow-sm">Kids&apos; Contest</h2>
 
-				<div className="flex justify-center mb-8">
-					<div className="px-6 py-2 bg-yellow-100 rounded-full border-2 border-yellow-300 shadow-md">
-						<p className="text-lg font-bold text-yellow-800">Ages 17 &amp; under</p>
-					</div>
+				<div className="flex flex-col  justify-center gap-4 mb-8">
+					<Link href="/join"
+						className=" rounded-full">
+						<Button className="px-2 py-2 bg-yellow-100 rounded-full border-2 border-yellow-300 text-lg font-bold text-yellow-800 shadow-lg transform transition-transform hover:scale-105 whitespace-nowrap"
+						size="default">
+							<ChefHat className="w-6 h-6 mr-2" />
+							Ages 17 &amp; under, click here join the Fun!
+							<ArrowRight className="w-6 h-6 ml-2" />
+						</Button>
+					</Link>
+					<Link href="https://checkout.square.site/merchant/MLB8TY1QMQG6C/checkout/2CDTARWNLSSNSKDCUZF3SAFV?src=webqr" >
+                            <Button
+                                variant="outline"
+                                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-lg transform transition-transform hover:scale-105 text-white font-bold "
+                            >
+                                Donate
+                            </Button>
+                        </Link>
 				</div>
 
 				<article>
@@ -103,7 +117,8 @@ export default function Home() {
 						</ul>
 						<div className="flex flex-wrap justify-end gap-4 mt-3">
 							<Link href="/rules">
-								<Button className="px-6 py-6 text-lg font-bold text-white bg-blue-500 hover:bg-blue-600">
+								<Button className="px-6 md:p-6 text-md md:text-lg font-bold text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
+								size="default">
 
 									See Contest Rules
 								</Button>

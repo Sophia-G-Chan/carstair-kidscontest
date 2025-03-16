@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLeft, MapPin, Clock, Calendar, Info, Star, Heart, Sparkles } from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Calendar, Info, Star, Heart, Sparkles, ArrowBigUp } from "lucide-react"
 import Link from 'next/link'
 
 
@@ -25,24 +25,39 @@ function VenuePage() {
                     <h1 className="mb-6 text-3xl font-bold text-center text-green-600">Venue Information</h1>
 
                     <div className="space-y-8">
-                        <div className="flex items-start p-4 bg-green-100 rounded-lg">
-                            <MapPin className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-green-700" />
-                            <div>
-                                <h2 className="mb-2 text-xl font-bold text-green-800">Location</h2>
-                                <p className="text-lg font-medium">Carstairs Curling Rink</p>
-                                <p>350 11 Ave,</p>
-                                <p>Carstairs, Alberta T0M 0N0</p>
-                                <p className="mt-2">
-                                    <a
-                                        href="https://maps.google.com/?q=Carstairs+Curling+Rink"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center text-green-700 hover:text-green-900 hover:underline"
-                                    >
-                                        View on Google Maps
-                                    </a>
-                                </p>
+                        <div className="flex gap-2 flex-col md:flex-row items-start p-4 bg-green-100 rounded-lg">
+                            <div className="flex items-start">
+                                <MapPin className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-green-700" />
+                                <div>
+                                    <h2 className="mb-2 text-xl font-bold text-green-800">Location</h2>
+                                    <p className="text-lg font-medium">Carstairs Curling Rink</p>
+                                    <p>350 11 Ave,</p>
+                                    <p>Carstairs, Alberta T0M 0N0</p>
+                                    <p className="mt-2">
+                                        <a
+                                            href="https://maps.google.com/?q=Carstairs+Curling+Rink"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center text-green-700 hover:text-green-900 hover:underline"
+                                        >
+                                            View on Google Maps
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
+                            <div className="flex items-start">
+                                <Info className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-yellow-700" />
+                                <div>
+                                    <h2 className="mb-2 text-xl font-bold text-yellow-800">Facility Information</h2>
+                                    <ul className="pl-5 space-y-2 list-disc">
+                                        <li>Wheelchair accessible entrance and facilities</li>
+                                        <li>Free parking available on-site</li>
+                                        <li>Restrooms available</li>
+                                        <li>Photography is permitted and encouraged</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div className="grid gap-6 md:grid-cols-2">
@@ -58,35 +73,31 @@ function VenuePage() {
                                 </div>
                             </div>
 
-                            <div className="flex items-start p-4 bg-red-100 rounded-lg">
-                                <Clock className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-red-700" />
+                            <div className="flex items-start p-4 bg-pink-200 rounded-lg">
+                                <Clock className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-pink-700" />
                                 <div>
-                                    <h2 className="mb-2 text-xl font-bold text-red-800">Viewing Day</h2>
+                                    <h2 className="mb-2 text-xl font-bold text-pink-700">Viewing Day</h2>
                                     <p className="text-lg font-medium">Saturday, August 16, 2025</p>
                                     <p>11:00 AM - 4:00 PM</p>
-                                    <p className="mt-2 text-sm text-red-700">Awards ceremony will be held at 3:00 PM</p>
+                                    <p className='my-2'>This is when family, friends and community gather to appreciate the talents and hard work of our participants!</p>
+                                    <p className="mt-2 font-bold text-lg text-pink-700">Awards ceremony will be held at 3:00PM</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="flex items-start p-4 bg-yellow-100 rounded-lg">
-                            <Info className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-yellow-700" />
+                            <ArrowBigUp className="flex-shrink-0 w-6 h-6 mt-1 mr-3 text-yellow-700" />
                             <div>
-                                <h2 className="mb-2 text-xl font-bold text-yellow-800">Facility Information</h2>
-                                <ul className="pl-5 space-y-2 list-disc">
-                                    <li>Wheelchair accessible entrance and facilities</li>
-                                    <li>Free parking available on-site</li>
-                                    <li>Restrooms available</li>
-                                    <li>Refreshments will be available for purchase on viewing day</li>
-                                    <li>Photography is permitted and encouraged</li>
-                                </ul>
+                            <h2 className="mb-2 text-xl font-bold text-yellow-700">Collection</h2>
+                                    <p className="text-lg font-medium">After the awards ceremony, please pick up your award money if you have not already done so, and your entry items. Please wait until the award ceremony is done to pick up your entries so everyone may view the contest.</p>
+
                             </div>
                         </div>
 
                         <div className="p-4 text-center bg-purple-100 rounded-lg">
                             <h2 className="mb-2 text-xl font-bold text-purple-800">Questions?</h2>
                             <p className="text-purple-700">For more information about the venue or event, please contact:</p>
-                            <a className="mt-2 font-bold text-purple-800" href="mailto:rose.warden@hotmail.com">Rose</a>
+                            <a className="mt-2 font-bold text-purple-800" href="mailto:carstairskidscontest@gmail.com">Rose Warden</a>
                         </div>
                     </div>
                 </div>
