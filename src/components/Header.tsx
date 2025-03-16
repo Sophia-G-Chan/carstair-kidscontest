@@ -97,8 +97,8 @@ function Header() {
                     <div className='hidden md:flex gap-2 items-center'>
                         <Link href="/rules" >
                             <Button
-                                variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                                variant="default"
+                                className="font-medium  text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
                                 <Image
                                     src="/checklist.png"
@@ -112,26 +112,25 @@ function Header() {
                         </Link>
                         <Link href="/venue" className='flex items-center'>
                             <Button
-                                variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                                variant="default"
+                                className="font-medium text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
-                                <MapPin className="flex-shrink-0 w-6 h-6 pr-1 text-blue-600"  width={24}
-                                    height={24}/>
+
                                 Venue Info
                             </Button>
                         </Link>
                         <Link href="/join" >
                             <Button
-                                variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                                variant="default"
+                                className="font-medium  text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
                                 Register
                             </Button>
                         </Link>
-                        <Link href="/support-us" >
+                        <Link href="/get-involved" >
                             <Button
-                                variant="outline"
-                                className="font-medium border-2 border-blue-400 text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
+                                variant="default"
+                                className="font-medium  text-blue-600 hover:bg-blue-100 rounded whitespace-nowrap h-8"
                             >
                                 Get Involved
                             </Button>

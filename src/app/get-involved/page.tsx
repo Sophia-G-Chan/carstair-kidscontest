@@ -24,7 +24,7 @@ export default function DonatePage() {
                     <h1 className="mb-2 text-3xl font-bold text-center text-blue-600">Support Carstairs Kids Connect</h1>
                     <h2>There are two ways to support the Carstairs Kids Contest</h2>
                     <ol className=" space-y-2 flex flex-col md:flex-row gap-4">
-                        <li className="flex flex-col gap-2 items-center p-4 bg-cyan-50 rounded-lg">
+                        <li className="flex-1 flex flex-col gap-2 items-center p-4 bg-cyan-50 rounded-lg">
                             <div className="space-y-6 text-blue-800">
                                 <h3 className="mb-2 text-xl font-semibold text-blue-800 flex items-center">1. Donate</h3>
                                 <p>
@@ -52,7 +52,7 @@ export default function DonatePage() {
                                 </div>
                             </div>
                         </li>
-                        <li className="flex flex-col gap-2 items-center p-4 bg-green-50 rounded-lg">
+                        <li className="flex-1 flex flex-col gap-2 items-center p-4 bg-green-50 rounded-lg">
                             <div className="space-y-6 text-gray-800">
                                 <h3 className="mb-2 text-lg font-semibold text-green-600 flex items-center">2. Volunteer</h3>
                                 <p>

@@ -17,10 +17,21 @@ export default function RegisterPage() {
                     <div className="p-8 bg-white rounded-lg shadow-lg">
                         <h1 className="mb-6 text-3xl font-bold text-center text-purple-600">Register for the Contest</h1>
 
-                        <div className="p-4 mb-6 text-center bg-yellow-100 rounded-lg">
-                            <p className="text-yellow-800">
-                                Bring the form below on Friday, August 15, 2025, 8am-11am along with the entry tags to register for the Carstairs Kids Contest.
-                            </p>
+                        <div className="p-4 mb-6 bg-yellow-100 rounded-lg">
+                            <h2 className="font-bold text-xl mb-4">How To Submit Your Entry</h2>
+                            <ul className="list-disc list-inside">
+                                <li>Fill out the attached entry form and bring it with your entries.</li>
+                                <li>All entries must be labelled with an entry tag. Without a tag, we cannot know who made the item.</li>
+                                <li>Please print out entry tags from the attached template, fill them out, and securely attach one to each entry.</li>
+                                <li>Tags may be attached using clear tape or another secure method. They may also be folded in half.</li>
+                                <li>Entry tags must be completed in full. Name varieties of vegetable and flower entries if possible.</li>
+                                <li>When declaring an item as an individual or group entry, consider: &quot;Whose hands did the work?&quot;</li>
+                                <li>The contest is held at Carstairs Curling Rink, 350 11th Ave, Carstairs, AB T0M 0N0 (beside the water park).</li>
+                                <li>Doors open for entry drop-off on <strong>Friday, August 15th, at 8:00 AM.</strong></li>
+                                <li>Tables will be labeled by category. Find the correct space and place your entry accordingly.</li>
+                                <li>Doors close at 11:00 AM for judging.</li>
+                            </ul>
+
                         </div>
                         <div className=" p-4 rounded-lg overflow-hidden mb-6 shadow-md">
                             <h2 className="font-bold text-xl mb-4">Example Entry Tag </h2>
