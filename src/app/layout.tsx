@@ -25,6 +25,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/ckcfavicon.ico",
   },
+  openGraph: {
+    title: "Carstairs Kids' Make, Bake & Grow Contest",
+    description:
+      "Join the Carstairs Horticultural & Craft Show for an exciting family adventure! Get creative together as kids make, bake, and grow their way to fun. A fantastic community event where young talents shine through crafts, cooking, and gardening. Enter now for memorable family moments!",
+    url: "https://carstairskidscontest.vercel.app/",
+    siteName: "Carstairs Kids Contest 2025",
+    locale: "en_CA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
