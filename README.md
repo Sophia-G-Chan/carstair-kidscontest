@@ -1,5 +1,5 @@
-# Carstairs kids connect
-Carstairs kids connect is a event for kids age 17 and under. Checkout [carstairs-kids-connect.vercel.app](https://carstairskidscontest.vercel.app/) for more details.
+# [Carstairs Kids' Contest](https://carstairskidscontest.vercel.app/)
+Carstairs Kids' Contest is a event for kids age 17 and under. Checkout [carstairs-kids-connect.vercel.app](https://carstairskidscontest.vercel.app/) for more details.
 
 ## Getting Started
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
