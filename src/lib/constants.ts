@@ -103,6 +103,11 @@ export const cashAwardsData: CashAwardsData = {
             "Ages 11-17 Individual": 10,
             "Group": 10
         },
+        "Best in Show Design Entry (JA7)": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
         "Best in Show Photography": {
             "Ages 6-10 Individual": 10,
             "Ages 11-17 Individual": 10,
@@ -205,7 +210,6 @@ export const cashAwardsData: CashAwardsData = {
                 { code: "JH12", description: "Holiday decoration - any article" },
                 { code: "JH16", description: "Models - from kit" },
                 { code: "JH17", description: "LEGO – transportation (boat, car, plane, spaceship etc.) Base maximum size 16\" X 16\" (41 cm X 41 cm). No kits, must be an original creation." },
-                { code: "JH18", description: "LEGO - technical or mechanical. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH19", description: "LEGO – buildings. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH20", description: "LEGO – other, i.e. scenery, animals. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH21", description: "Mounted collection - stamps, coins, etc." },
@@ -220,7 +224,7 @@ export const cashAwardsData: CashAwardsData = {
                 { code: "JA4", description: "Pencil Sketch - colour, crayon, pencil crayon" },
                 { code: "JA5", description: "Pastel - chalk, oil chalk, etc., mounted on stiff backing" },
                 { code: "JA6", description: "Open art work - not in any other art work class" },
-                { code: "JA7", description: "Computer Design - original, i.e. greeting card, invitations, etc." },
+                { code: "JA7", description: "Computer Coloring Page Design – original design, garden theme for young children. We request permission to reprint your design for future contests. *cash award" },
                 { code: "JA8", description: "Handcrafted Greeting Card - not done by computer" },
                 { code: "JA9", description: "Collage - collection of photos, pictures, items, mounted on stiff backing" },
                 { code: "JA10", description: "Scrapbook Page - any kind, any size" },
@@ -254,16 +258,16 @@ export const cashAwardsData: CashAwardsData = {
         {
             name: "5 Years Old & Younger Section",
             categories: [
-                { code: "U6-1", description: "Cookies – plate of 3" },
-                { code: "U6-2", description: "Decorated Cupcakes – 3" },
-                { code: "U6-3", description: "Rice Krispie Figure or Creation. All decorating or colouring must be edible." },
-                { code: "U6-4", description: "Play Dough or Play Clay Creation" },
-                { code: "U6-5", description: "Duplo or LEGO Creation. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
-                { code: "U6-6", description: "Painted Rock Art" },
-                { code: "U6-7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
-                { code: "U6-8", description: "Any other craft article" },
-                { code: "U6-9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
-                { code: "U6-10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
+                { code: "U1", description: "Cookies – plate of 3" },
+                { code: "U2", description: "Decorated Cupcakes – 3" },
+                { code: "U3", description: "Rice Krispie Figure or Creation. All decorating or colouring must be edible." },
+                { code: "U4", description: "Play Dough or Play Clay Creation" },
+                { code: "U5", description: "Duplo or LEGO Creation. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "U6", description: "Painted Rock Art" },
+                { code: "U7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
+                { code: "U8", description: "Any other craft article" },
+                { code: "U9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
+                { code: "U10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
             ],
             cashAwards: {
                 "Best in Show - Best entry from U1 - U9": 10,
