@@ -55,7 +55,7 @@ export default function RegisterPage() {
                             <SimplePdfViewer pdfPath="/entry-form.pdf" />
                             <iframe
                                 src='/entry-form.pdf'
-                                className="w-full h-80 md:h-96 lg:h-250"
+                                className="block md:hidden w-full h-80 md:h-96 lg:h-250"
                                 title="Entry Form PDF"
                                 allow="fullscreen"
                             />
