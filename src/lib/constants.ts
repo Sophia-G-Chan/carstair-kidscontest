@@ -103,6 +103,11 @@ export const cashAwardsData: CashAwardsData = {
             "Ages 11-17 Individual": 10,
             "Group": 10
         },
+        "Best in Show Design Entry (JA7)": {
+            "Ages 6-10 Individual": 10,
+            "Ages 11-17 Individual": 10,
+            "Group": 10
+        },
         "Best in Show Photography": {
             "Ages 6-10 Individual": 10,
             "Ages 11-17 Individual": 10,
@@ -205,7 +210,6 @@ export const cashAwardsData: CashAwardsData = {
                 { code: "JH12", description: "Holiday decoration - any article" },
                 { code: "JH16", description: "Models - from kit" },
                 { code: "JH17", description: "LEGO – transportation (boat, car, plane, spaceship etc.) Base maximum size 16\" X 16\" (41 cm X 41 cm). No kits, must be an original creation." },
-                { code: "JH18", description: "LEGO - technical or mechanical. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH19", description: "LEGO – buildings. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH20", description: "LEGO – other, i.e. scenery, animals. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
                 { code: "JH21", description: "Mounted collection - stamps, coins, etc." },
@@ -220,7 +224,7 @@ export const cashAwardsData: CashAwardsData = {
                 { code: "JA4", description: "Pencil Sketch - colour, crayon, pencil crayon" },
                 { code: "JA5", description: "Pastel - chalk, oil chalk, etc., mounted on stiff backing" },
                 { code: "JA6", description: "Open art work - not in any other art work class" },
-                { code: "JA7", description: "Computer Design - original, i.e. greeting card, invitations, etc." },
+                { code: "JA7", description: "Computer Coloring Page Design – original design, garden theme for young children. We request permission to reprint your design for future contests. *cash award" },
                 { code: "JA8", description: "Handcrafted Greeting Card - not done by computer" },
                 { code: "JA9", description: "Collage - collection of photos, pictures, items, mounted on stiff backing" },
                 { code: "JA10", description: "Scrapbook Page - any kind, any size" },
