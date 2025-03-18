@@ -52,15 +52,6 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="border  rounded-lg overflow-hidden">
-                            {/* <a
-                                href="/entry-form.pdf"
-                                download
-                                className="text-center mt-2 text-blue-600 underline flex gap-2"
-                            >
-
-                                Download PDF Here
-                            </a> */}
-
                             <SimplePdfViewer pdfPath="/entry-form.pdf" />
                             <iframe
                                 src='/entry-form.pdf'
