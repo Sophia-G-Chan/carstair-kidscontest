@@ -1,4 +1,4 @@
-# Carstairs Kids' Contest
+# [Carstairs Kids' Contest](https://carstairskidscontest.vercel.app/)
 Carstairs Kids' Contest is a event for kids age 17 and under. Checkout [carstairs-kids-connect.vercel.app](https://carstairskidscontest.vercel.app/) for more details.
 
 ## Getting Started
