@@ -86,7 +86,9 @@ export default function RulePage() {
                                     <li>For “Group” entries, at least 50% of the group members must be aged 17 and under.</li>
                                     <li>Entries must be made, grown or produced by the participant(s), and not previously entered at one of our past events.</li>
                                     <li>All vegetable and flower entries must be grown within Mountain View County. Please no restricted or noxious weeds.</li>
-                                    <li>Each individual participant, or member within a group, may have no more than one entry per category (e.g. one entry in VF1 cabbage). There is no limit to the number of categories participants can enter.</li>
+                                    <li>Each participant (individual or member within a group), may have
+                                    only one entry in each category (e.g. one entry in JF8 Sunflower).</li>
+                                    <li>Participants may enter multiple categories. There is no limit to the number of categories participants may enter.</li>
                                     <li>
                                         Judging will follow the “Fair System” (for more info check out the&nbsp;
                                         <a
@@ -103,8 +105,7 @@ export default function RulePage() {
                                         </ul>
                                     </li>
                                     <li>
-                                        Entries must include a completed entry form (available at the venue or downloadable from our
-                                        website)
+                                        Ribbons do not always equal a cash award. Cash awards depend on sponsorship, fundraising & donations. If you would like to volunteer or donate, please contact us – your help is appreciated!
                                     </li>
                                 </ol>
                             </div>
