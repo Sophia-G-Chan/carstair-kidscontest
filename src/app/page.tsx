@@ -70,7 +70,7 @@ export default function Home() {
 						<Button className="px-2 py-2 bg-yellow-100 rounded-full border-2 border-yellow-300 text-lg font-bold text-yellow-800 shadow-lg transform transition-transform hover:scale-105 whitespace-nowrap"
 						size="default">
 							<ChefHat className="w-6 h-6 mr-2" />
-							Ages 17 &amp; under, click here join the Fun!
+							Entry form & tags here!
 							<ArrowRight className="w-6 h-6 ml-2" />
 						</Button>
 					</Link>

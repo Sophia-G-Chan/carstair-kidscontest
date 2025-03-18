@@ -1,9 +1,12 @@
-
+'use client'
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
+import SimplePdfViewer from '@/components/SimplePdfViewer'
+
 
 export default function RegisterPage() {
+
     return (
         <div className="min-h-screen bg-white">
 
@@ -33,6 +36,10 @@ export default function RegisterPage() {
                             </ul>
 
                         </div>
+                        <a
+                            href='https://drive.google.com/drive/folders/1sUQFhBz_NAlEeTXJAYWAfqGCYPjqieJF'
+                            className="mb-6 block p-4 text-center text-blue-600 bg-blue-100 rounded-xl border-2 border-blue-200 hover:bg-blue-200"
+                        >Detailed PDF Rules Click Here</a>
                         <div className=" p-4 rounded-lg overflow-hidden mb-6 shadow-md">
                             <h2 className="font-bold text-xl mb-4">Example Entry Tag </h2>
                             <Image
@@ -45,10 +52,12 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="border  rounded-lg overflow-hidden">
+                            <SimplePdfViewer pdfPath="/entry-form.pdf" />
                             <iframe
                                 src='/entry-form.pdf'
-                                className="w-full h-250"
+                                className="w-full h-80 md:h-96 lg:h-250"
                                 title="Entry Form PDF"
+                                allow="fullscreen"
                             />
                         </div>
                     </div>
