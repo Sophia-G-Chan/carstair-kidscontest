@@ -258,16 +258,16 @@ export const cashAwardsData: CashAwardsData = {
         {
             name: "5 Years Old & Younger Section",
             categories: [
-                { code: "U6-1", description: "Cookies – plate of 3" },
-                { code: "U6-2", description: "Decorated Cupcakes – 3" },
-                { code: "U6-3", description: "Rice Krispie Figure or Creation. All decorating or colouring must be edible." },
-                { code: "U6-4", description: "Play Dough or Play Clay Creation" },
-                { code: "U6-5", description: "Duplo or LEGO Creation. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
-                { code: "U6-6", description: "Painted Rock Art" },
-                { code: "U6-7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
-                { code: "U6-8", description: "Any other craft article" },
-                { code: "U6-9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
-                { code: "U6-10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
+                { code: "U1", description: "Cookies – plate of 3" },
+                { code: "U2", description: "Decorated Cupcakes – 3" },
+                { code: "U3", description: "Rice Krispie Figure or Creation. All decorating or colouring must be edible." },
+                { code: "U4", description: "Play Dough or Play Clay Creation" },
+                { code: "U5", description: "Duplo or LEGO Creation. Base no larger than 16\"X16\" (41cmX41cm) No kits, must be an original creation." },
+                { code: "U6", description: "Painted Rock Art" },
+                { code: "U7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
+                { code: "U8", description: "Any other craft article" },
+                { code: "U9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
+                { code: "U10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
             ],
             cashAwards: {
                 "Best in Show - Best entry from U1 - U9": 10,
