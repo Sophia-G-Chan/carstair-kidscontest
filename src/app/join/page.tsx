@@ -1,9 +1,12 @@
-
+'use client'
 import Link from "next/link"
-import { ArrowLeft, Download } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
+import SimplePdfViewer from '@/components/SimplePdfViewer'
+
 
 export default function RegisterPage() {
+
     return (
         <div className="min-h-screen bg-white">
 
@@ -49,21 +52,22 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="border  rounded-lg overflow-hidden">
-                            <a
+                            {/* <a
                                 href="/entry-form.pdf"
                                 download
                                 className="text-center mt-2 text-blue-600 underline flex gap-2"
                             >
-                                <Download className="" />
+
                                 Download PDF Here
-                            </a>
+                            </a> */}
+
+                            <SimplePdfViewer pdfPath="/entry-form.pdf" />
                             <iframe
                                 src='/entry-form.pdf'
                                 className="w-full h-80 md:h-96 lg:h-250"
                                 title="Entry Form PDF"
                                 allow="fullscreen"
                             />
-
                         </div>
                     </div>
                 </div>
