@@ -237,19 +237,19 @@ export const cashAwardsData: CashAwardsData = {
         {
             name: "Photography Section",
             categories: [
-                { code: "JH30", description: "Action/Movement - i.e. Sports" },
-                { code: "JH31", description: "Agriculture" },
-                { code: "JH32", description: "Landscape" },
-                { code: "JH33", description: "Waterscape" },
-                { code: "JH34", description: "People/Person" },
-                { code: "JH36", description: "Animal or bird - domestic (i.e. livestock)" },
-                { code: "JH37", description: "Animal or bird – wild" },
-                { code: "JH38", description: "Pet(s)" },
-                { code: "JH39", description: "Carstairs Area" },
-                { code: "JH40", description: "Garden - flowers, plants, trees or garden" },
-                { code: "JH41", description: "Still Life style" },
-                { code: "JH42", description: "Selfie - take a photo of yourself by yourself (Individual entry only)" },
-                { code: "JH43", description: "Open class - any subject not covered above" }
+                { code: "JP30", description: "Action/Movement - i.e. Sports" },
+                { code: "JP31", description: "Agriculture" },
+                { code: "JP32", description: "Landscape" },
+                { code: "JP33", description: "Waterscape" },
+                { code: "JP34", description: "People/Person" },
+                { code: "JP36", description: "Animal or bird - domestic (i.e. livestock)" },
+                { code: "JP37", description: "Animal or bird – wild" },
+                { code: "JP38", description: "Pet(s)" },
+                { code: "JP39", description: "Carstairs Area" },
+                { code: "JP40", description: "Garden - flowers, plants, trees or garden" },
+                { code: "JP41", description: "Still Life style" },
+                { code: "JP42", description: "Selfie - take a photo of yourself by yourself (Individual entry only)" },
+                { code: "JP43", description: "Open class - any subject not covered above" }
             ],
             cashAwards: {
                 "Best in Show Photography": 10
@@ -266,8 +266,8 @@ export const cashAwardsData: CashAwardsData = {
                 { code: "U6", description: "Painted Rock Art" },
                 { code: "U7", description: "Seed Picture – any seeds, on card stock, no larger than 8½\"X11\" (21.5X28cm)" },
                 { code: "U8", description: "Any other craft article" },
-                { code: "U9", description: "Contest Colouring Book Page – Crayon or pencil crayon only" },
-                { code: "U10", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden." }
+                { code: "U9", description: "Mud Pie. Garden mud in a foil plate, decorated with anything from the garden. " },
+                { code: "U10", description: "Contest Colouring Book Page – Crayon or pencil crayon only" }
             ],
             cashAwards: {
                 "Best in Show - Best entry from U1 - U9": 10,
