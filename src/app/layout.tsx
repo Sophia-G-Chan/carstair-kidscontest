@@ -20,8 +20,10 @@ const dynaPuff = DynaPuff({
 })
 export const metadata: Metadata = {
   title: "Carstairs Kids' Make, Bake & Grow Contest",
-  description: "Join the Carstairs Horticultural & Craft Show for an exciting family adventure! Get creative together as kids make, bake, and grow their way to fun. A fantastic community event where young talents shine through crafts, cooking, and gardening. Enter now for memorable family moments!",
-  keywords: "kids contest, family activities, Carstairs events, craft show, horticultural show, baking competition, gardening for kids",
+  description:
+    "Join the Carstairs Horticultural & Craft Show for an exciting family adventure! Get creative together as kids make, bake, and grow their way to fun. A fantastic community event where young talents shine through crafts, cooking, and gardening. Enter now for memorable family moments!",
+  keywords:
+    "kids contest, family activities, Carstairs events, craft show, horticultural show, baking competition, gardening for kids, Carstairs kids contest",
   icons: {
     icon: "/ckcfavicon.ico",
   },
@@ -34,7 +36,11 @@ export const metadata: Metadata = {
     locale: "en_CA",
     type: "website",
   },
+  other: {
+    "google-site-verification": "T09CEhJcAxk9dlNAA6o8T96HT0it46WXFFzHL3G-gtg",
+  },
 };
+
 
 export default function RootLayout({
   children,
